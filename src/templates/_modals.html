@@ -1,0 +1,154 @@
+            @@if ( context.register_guest === 'true') {
+            <div class="modal fade" id="register_guest" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                          <svg class="icon icon-cross" data-dismiss="modal"><use xlink:href="#icon-cross"></use></svg>
+                    <h4 class="modal-title">Регистрация гостя</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group with-icon">
+                      <input type="email" class="form-control" placeholder="E-mail">
+                      <svg class="icon icon-envelope"><use xlink:href="#icon-envelope"></use></svg>
+                    </div>
+                    <div class="form-group with-icon">
+                      <input type="password" class="form-control" placeholder="Пароль">
+                      <svg class="icon icon-key"><use xlink:href="#icon-key"></use></svg>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#thanks">Регистрация</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+            @@if ( context.register_master === 'true') {
+            <div class="modal fade" id="register_master" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                          <svg class="icon icon-cross" data-dismiss="modal"><use xlink:href="#icon-cross"></use></svg>
+                    <h4 class="modal-title">Регистрация хозяина</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group with-icon">
+                      <input type="text" class="form-control" placeholder="ФИО">
+                      <svg class="icon icon-user-login"><use xlink:href="#icon-user-login"></use></svg>
+                    </div>
+                    <div class="form-group with-icon">
+                      <input type="tel" class="form-control" placeholder="Телефон">
+                      <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
+                    </div>
+                    <div class="form-group with-icon">
+                      <input type="email" class="form-control" placeholder="E-mail">
+                      <svg class="icon icon-envelope"><use xlink:href="#icon-envelope"></use></svg>
+                    </div>
+                    <div class="form-group with-icon">
+                      <input type="password" class="form-control" placeholder="Пароль">
+                      <svg class="icon icon-key"><use xlink:href="#icon-key"></use></svg>
+                    </div>
+                    <div class="form-group with-icon">
+                      <input type="password" class="form-control" placeholder="Подтвердить пароль">
+                      <svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#thanks">Регистрация</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+            @@if ( context.thanks === 'true') {
+            <div class="modal fade" id="thanks" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                          <svg class="icon icon-cross" data-dismiss="modal"><use xlink:href="#icon-cross"></use></svg>
+                    <h4 class="modal-title">Спасибо за регистрацию</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p class="fs-20 lh-24 text-center">Вам на почту отправлено письмо, <br>перейдите по ссылке, чтобы подтвердить</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+            @@if ( context.reservation === 'true') {
+            <div class="modal fade" id="reservation" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                          <svg class="icon icon-cross" data-dismiss="modal"><use xlink:href="#icon-cross"></use></svg>
+                    <h4 class="modal-title">Бронирование</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="col-xs-12 no-padding-h indent-30">
+                      <label class="col-xs-12 no-padding-h indent-20">
+                        <span class="col-sm-3 col-xs-12 text-gray text-regular no-padding-h">ФИО</span>
+                        <input type="text" value="Иван Ефграфьевич Иванов" class="form-profile col-sm-8 col-xs-12 no-padding-v">
+                      </label>
+                      <label class="col-xs-12 no-padding-h indent-20">
+                        <span class="col-sm-3 col-xs-12 text-gray text-regular no-padding-h">Тел.</span>
+                        <input type="tel" value="065 586 56 59" class="form-profile col-sm-8 col-xs-12 no-padding-v">
+                      </label>
+                      <label class="col-xs-12 no-padding-h indent-20">
+                        <span class="col-sm-3 col-xs-12 text-gray text-regular no-padding-h">E-mail</span>
+                        <input type="email" value="example@mail.com" class="form-profile col-sm-8 col-xs-12 no-padding-v">
+                      </label>
+                    </div>
+                    <p class="fs-18 lh-24 text-bold indent-40 text-center">Ваш запрос будет отправлен хозяину квартиры.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <div class="text-left">
+                      <p class="fs-18 lh-18 indent-0 text-semibold">Данные хозяина</p>
+                      <p class="indent-0">Вы можете связаться с хозяином напрямую для уточнения деталей</p>
+                      <div class="data-master indent-40">
+                        <div class="row">
+                          <div class="col-sm-6 col-xs-7">E-mail</div>
+                          <div class="col-sm-4 col-xs-5">example@mail.com</div>
+                          <div class="col-sm-6 col-xs-7">Телефон</div>
+                          <div class="col-sm-4 col-xs-5">099-999-99-99</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button type="button" class="btn btn-default fs-12" data-dismiss="modal" data-toggle="modal" data-target="#thanks_reservation">Отправить</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+            @@if ( context.thanks_reservation === 'true') {
+            <div class="modal fade" id="thanks_reservation" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                          <svg class="icon icon-cross" data-dismiss="modal"><use xlink:href="#icon-cross"></use></svg>
+                    <h4 class="modal-title">Бронирование</h4>
+                  </div>
+                  <div class="modal-body text-center">
+                    <p class="fs-18 lh-24 text-bold">Ваш запрос будет отправлен хозяину квартиры. <br> Ожидайте подтверждения.</p>
+                    <p class="indent-30">Вы можете отслеживать статус вашего запроса в «Мои бронирования</p>
+                    <button type="button" class="btn btn-default indent-30 fs-12">Отправить</button>
+                  </div>
+                  <div class="modal-footer">
+                    <div class="text-left">
+                      <p class="fs-18 lh-18 indent-0 text-semibold">Данные хозяина</p>
+                      <p class="indent-0">Вы можете связаться с хозяином напрямую для уточнения деталей</p>
+                      <div class="data-master">
+                        <div class="row">
+                          <div class="col-sm-6 col-xs-7">E-mail</div>
+                          <div class="col-sm-4 col-xs-5">example@mail.com</div>
+                          <div class="col-sm-6 col-xs-7">Телефон</div>
+                          <div class="col-sm-4 col-xs-5">099-999-99-99</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            }

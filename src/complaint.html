@@ -1,0 +1,90 @@
+@@include('templates/_head.html', {
+	"title": "Жалобы"
+})
+
+@@include('templates/_header_inline.html')
+
+									<div class="container pl-md-40">
+										<div class="row relative">
+											<h1 class="col-md-offset-3 col-md-9 col-xs-12 text-center indent-55-md indent-55-sm indent-45-xs">Жалобы</h1>
+											<button type="button" class="icon icon-menu hidden-md hidden-lg">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+
+											<div class="col-md-3 sidebar">
+												@@include('templates/_sidebar_main.html')
+											</div>
+											<div class="col-md-9 col-xs-12 content">
+												<div class="sort indent-20">
+													<div class="row">
+														<select class="col-sm-3 col-xs-5 sm" data-placeholder="По дате">
+															<option></option>
+															<option value="">По возрастанию</option>
+															<option value="">По убыванию</option>
+															<option value="">Случайный порядок</option>
+														</select>
+														<select class="col-sm-3 col-xs-5 sm" data-placeholder="По имени">
+															<option></option>
+															<option value="">По алфавиту</option>
+															<option value="">Случайный порядок</option>
+														</select>
+													</div>
+												</div>
+												<div class="complaint">
+													<div class="row">
+													<div class="col-sm-2 col-xs-4 text-center">
+														<img src="img/avatar.png" class="avatar indent-15" alt="">
+														<p class="name">Семен Петров</p>
+													</div>
+													<div class="col-md-8 col-xs-8">
+														<p class="title text-semibold indent-20">Арендаор обманул, взял деньги и не сдал квартиру.</p>
+														<p class="description">Страница «Сообщения» должна предоставлять функционал по обмену сообщениями и просмотром истории переписки между хозяевами и гостями. Страница должна состоять из «Хэдера», «Футера» и области контента. Область контента должна содержать заголовок страницы, фильтр для фильтрации сообщений по имени пользователя и дате </p>
+														<p class="user"><strong class="text-semibold">На пользователя: </strong><a href="#">Константин Сидоров</a></p>
+													</div>
+													<div class="col-xs-2 hidden-sm hidden-xs date">
+														25 авг  18:20
+													</div>
+													</div>
+												</div>
+												<div class="complaint">
+													<div class="row">
+													<div class="col-sm-2 col-xs-4 text-center">
+														<img src="img/avatar.png" class="avatar indent-15" alt="">
+														<p class="name">Семен Петров</p>
+													</div>
+													<div class="col-md-8 col-xs-8">
+														<p class="title text-semibold indent-20">Арендаор обманул, взял деньги и не сдал квартиру.</p>
+														<p class="description">Страница «Сообщения» должна предоставлять функционал по обмену сообщениями и просмотром истории переписки между хозяевами и гостями. Страница должна состоять из «Хэдера», «Футера» и области контента. Область контента должна содержать заголовок страницы, фильтр для фильтрации сообщений по имени пользователя и дате </p>
+														<p class="user"><strong class="text-semibold">На пользователя: </strong><a href="#">Константин Сидоров</a></p>
+													</div>
+													<div class="col-xs-2 hidden-sm hidden-xs date">
+														25 авг  18:20
+													</div>
+													</div>
+												</div>
+												<div class="complaint">
+													<div class="row">
+													<div class="col-sm-2 col-xs-4 text-center">
+														<img src="img/avatar.png" class="avatar indent-15" alt="">
+														<p class="name">Семен Петров</p>
+													</div>
+													<div class="col-md-8 col-xs-8">
+														<p class="title text-semibold indent-20">Арендаор обманул, взял деньги и не сдал квартиру.</p>
+														<p class="description">Страница «Сообщения» должна предоставлять функционал по обмену сообщениями и просмотром истории переписки между хозяевами и гостями. Страница должна состоять из «Хэдера», «Футера» и области контента. Область контента должна содержать заголовок страницы, фильтр для фильтрации сообщений по имени пользователя и дате </p>
+														<p class="user"><strong class="text-semibold">На пользователя: </strong><a href="#">Константин Сидоров</a></p>
+													</div>
+													<div class="col-xs-2 hidden-sm hidden-xs date">
+														25 авг  18:20
+													</div>
+													</div>
+												</div>
+												@@include('templates/_pagination.html')
+											</div>
+										</div>
+									</div>
+
+@@include('templates/_footer.html')
+
+@@include('templates/_end.html')

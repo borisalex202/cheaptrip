@@ -1,0 +1,238 @@
+@@include('templates/_head.html', {
+	"title": "CheapTrip - выбор даты и колисества гостей"
+})
+
+@@include('templates/_header_big.html')
+
+									<div class="container">
+										<div class="heading indent-75 relative">
+											<a href="index.html" class="back"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+											<p class="fs-28 lh-36 text-semibold text-uppercase text-center ls-1-7">Выберите даты и количество гостей</p>
+										</div>
+
+
+										<div class="filter row indent-10">
+											<div class="col-md-offset-1 col-md-10 col-xs-12">
+												<div class="row">
+													<div class="col-xs-12 no-padding-h">
+														<div class="col-md-4 col-sm-6 col-xs-12 indent-20">
+															<div class="form-group with-icon">
+																<input type="text" class="form-control datepicker-here" placeholder="Заезд">
+																<svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></use></svg>
+															</div>
+															<div class="form-group with-icon">
+																<input type="text" class="form-control datepicker-here" placeholder="Выезд">
+																<svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></use></svg>
+															</div>
+														</div>
+														<div class="col-md-4 col-sm-6 col-xs-12 indent-20">
+															<div class="col-xs-12 no-padding-h form-group">
+																<select class="col-xs-12 city no-padding-h" data-placeholder="К-во гостей">
+																	<option></option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																</select>
+															</div>
+															<div class="form-group">
+																<select class="col-xs-12 city no-padding-h" data-placeholder="К-во комнат">
+																	<option></option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-4 col-sm-12 col-xs-12 indent-20">
+															<div class="row">
+																<div class="col-md-12 col-sm-6 col-xs-12 form-group">
+																	<div class="row">
+																		<div class="col-xs-6"><input type="text" class="form-control" placeholder="Мин. цена (€)"></div>
+																		<div class="col-xs-6"><input type="text" class="form-control" placeholder="Макс. цена (€)"></div>
+																	</div>
+																</div>
+																<div class="col-md-12 col-sm-6 col-xs-12 form-group">
+																	<select class="col-xs-12 city no-padding-h" data-placeholder="Время действия запроса">
+																		<option></option>
+																		<option value="">1 день</option>
+																		<option value="">2 дня</option>
+																		<option value="">3 дня</option>
+																		<option value="">4 дня</option>
+																		<option value="">5 дней</option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-8 col-xs-12 add-funtions">
+														<a href="#" class="addidional-button" data-element=".function-checks">Дополнительные параметры</a>
+														<a href="#" class="addidional-button" data-element=".function-comment">Добавить комментарий</a>
+													</div>
+													<div class="col-md-4 col-xs-12 text-right">
+														<a href="index_step3.html" type="button" class="btn btn-default btn-40 fs-14">Далее</a>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-offset-1 col-md-10 col-xs-12 indent-90">
+												<div class="addidionals function-checks">
+													<div class="flex">
+														<div class="flex-1">
+															<label class="checkbox">
+					                        <input type="checkbox" id="check1" value=""> Кухня
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check2" value=""> Интернет
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check3" value=""> Телевизор
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check4" value=""> Туалетные принадлежности
+					                        <span></span>
+					                    </label>
+														</div>
+														<div class="flex-1">
+															<label class="checkbox">
+					                        <input type="checkbox" id="check5" value=""> Лифт
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check6" value=""> Камин
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check7" value=""> Домофон
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check8" value=""> Вахтер
+					                        <span></span>
+					                    </label>
+														</div>
+														<div class="flex-1 hidden-xs">
+															<label class="checkbox">
+					                        <input type="checkbox" id="check9" value=""> Отопление
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check10" value=""> Кондиционер
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check11" value=""> Стиральная машина
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check12" value=""> Сушильная машина
+					                        <span></span>
+					                    </label>
+														</div>
+														<div class="flex-1 hidden-sm hidden-xs">
+															<label class="checkbox">
+					                        <input type="checkbox" id="check13" value=""> Отопление
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check14" value=""> Кондиционер
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check15" value=""> Стиральная машина
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check16" value=""> Сушильная машина
+					                        <span></span>
+					                    </label>
+														</div>
+														<div class="flex-1 hidden-sm hidden-xs">
+															<label class="checkbox">
+					                        <input type="checkbox" id="check17" value=""> Отопление
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check18" value=""> Кондиционер
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check19" value=""> Стиральная машина
+					                        <span></span>
+					                    </label>
+															<label class="checkbox">
+					                        <input type="checkbox" id="check20" value=""> Сушильная машина
+					                        <span></span>
+					                    </label>
+														</div>
+													</div>
+												</div>
+												<div class="addidionals function-comment">
+													<div class="form-group">
+														<textarea name="name" rows="6" class="form-control" placeholder="Дополнительный комментарий"></textarea>
+													</div>
+													<div class="form-group text-right">
+														<button type="button" class="btn btn-default btn-40 fs-14">Добавить</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-md-offset-1 col-md-10 col-xs-12 info-steps">
+											<div class="col-xs-4 text-center step">
+												<span class="icon icon-circle indent-20"><svg class="icon icon-request"><use xlink:href="#icon-request"></use></svg></span>
+												<p class="info-steps-sm fs-22-sm lh-22-sm text-semibold text-uppercase indent-15">Сформируйте <br>запрос</p>
+												<p class="info-steps-sm fs-13 lh-18 indent-0">Задайте параметры <br>квартиры</p>
+											</div>
+											<div class="col-xs-4 text-center step">
+												<span class="icon icon-circle indent-20"><svg class="icon icon-send"><use xlink:href="#icon-send"></use></svg></span>
+												<p class="info-steps-sm fs-22-sm lh-22-sm text-semibold text-uppercase indent-15">Мы отправим ваш <br>запрос хозяевам</p>
+												<p class="info-steps-sm fs-13 lh-18 indent-0">Квартиры соответсвующие <br>вашим поисковым <br>требованиям</p>
+											</div>
+											<div class="col-xs-4 text-center step last">
+												<span class="icon icon-circle indent-20"><svg class="icon icon-finger"><use xlink:href="#icon-finger"></use></svg></span>
+												<p class="info-steps-sm fs-22-sm lh-22-sm text-semibold text-uppercase indent-15">Получите и выберите <br>лучшее предложение</p>
+												<p class="info-steps-sm fs-13 lh-18 indent-0">Вы сможете отфильтровать <br>для себя лучшее <br>предложение</p>
+											</div>
+											<div class="col-xs-12 info-steps-xs">
+												<p class="fs-28 lh-24 text-semibold text-uppercase indent-15">Сформируйте запрос</p>
+												<p class="fs-18 lh-18 indent-0">Задайте параметры квартиры</p>
+											</div>
+										</div>
+									</div>
+
+@@include('templates/_modals.html',{
+	"register_guest": "true",
+	"register_master": "true",
+	"thanks": "true"
+})
+
+@@include('templates/_footer.html')
+
+<script type="text/javascript">
+	$('.addidionals').each(function(){
+		$(this).data('height', $(this).css('height')).css('height', 0);
+	});
+	$('.addidional-button').on('click', function(e){
+		var el = $(this).data('element'),
+				elHeight = $(el).data('height');
+		e.preventDefault();
+
+		console.log(parseInt(elHeight) + 70);
+		$('.addidionals').animate({
+			height: 0,
+			paddingTop: '0px'
+		}, 200);
+
+		$(el).animate({
+			height: parseInt(elHeight) + 70,
+			paddingTop: '70px'
+		}, 400);
+	})
+</script>
+
+@@include('templates/_end.html')

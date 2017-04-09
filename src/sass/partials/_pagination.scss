@@ -1,0 +1,68 @@
+.pagination {
+	width: 100%;
+	margin: 23px 0;
+	text-align: center;
+	@include flexbox();
+	@include justify-content(center);
+
+	li {
+		margin: 0 4px;
+
+		&:first-child {
+			margin-left: 0;
+
+			a {
+				padding-left: 0;
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+
+			a {
+				padding-right: 0;
+			}
+		}
+		&.disabled {
+			a {
+				color: #a8a8a8;
+			}
+		}
+		&.active {
+			a {
+				background: $black;
+				color: $white;
+			}
+		}
+		a {
+			text-decoration: none;
+			padding: 4px 9.5px;
+			border-radius: 50%;
+			color: #232323;
+		}
+		@media screen and (max-width: $screen-sm-max) {
+			&.prev {
+				margin: 0 auto 0 0;
+
+				a {
+					font-size: 22px;
+				}
+			}
+			&.next {
+				margin: 0 0 0 auto;
+
+				a {
+					font-size: 22px;
+				}
+			}
+			a {
+				font-size: 18px;
+				padding: 4px 10.5px;
+			}
+		}
+		@media screen and (max-width: 719px) {
+			&:not(.prev, .next) {
+				display: none;
+			}
+		}
+	}
+}

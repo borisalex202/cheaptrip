@@ -1,0 +1,84 @@
+.datepicker {
+	background: $main-color;
+
+	&--pointer {
+		display: none;
+	}
+	&--nav {
+		padding: 14px 0;
+		margin-left: 10px;
+		margin-right: 10px;
+
+		&-action {
+			&:hover {
+				background: transparent;
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 2px;
+					bottom: 2px;
+					left: 6px;
+					right: 6px;
+					background: #FEC83D;
+					border-radius: 50%;
+					z-index: -1;
+				}
+			}
+		}
+		&-title {
+			border-radius: 20px;
+		}
+	}
+	&--cell {
+		border-radius: 50%;
+
+		&:hover,
+		&.-selected-,
+		&.-selected-:hover {
+			background: transparent;
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 3px;
+				bottom: 3px;
+				left: 6px;
+				right: 6px;
+				background: #FEC83D;
+				border-radius: 50%;
+				z-index: -1;
+			}
+		}
+		&-month {
+			&:hover,
+			&.-selected-,
+			&.-selected-:hover {
+				background: transparent;
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					max-width: 55px;
+					margin: 0 auto;
+					background: #FEC83D;
+					border-radius: 50%;
+					z-index: -1;
+				}
+			}
+		}
+	}
+	&--days-names {
+		margin-bottom: 10px;
+	}
+	&--content {
+		padding: 14px 5px;
+	}
+}

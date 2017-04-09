@@ -1,0 +1,50 @@
+.social {
+  margin: 0 auto 30px;
+
+  &-link {
+    display: inline-block;
+    padding: 17px 27px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+
+    &.fb {
+      background-color: #3D5B96;
+
+      &:hover {
+        background-color: lighten(#3D5B96, 10%);
+      }
+    }
+    &.vk {
+      background-color: #527397;
+
+      &:hover {
+        background-color: lighten(#527397, 10%);
+      }
+    }
+  }
+  li {
+    display: inline-block;
+    vertical-align: middle;
+
+    a {
+      display: block;
+      width: 67px;
+      height: 67px;
+      border: 1px solid $black;
+      line-height: 67px;
+      border-radius: 50%;
+      margin: 0 13px;
+      text-align: center;
+      color: $black;
+
+      &:hover {
+        background: $black;
+        color: $white;
+      }
+    }
+  }
+}

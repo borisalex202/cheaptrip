@@ -1,0 +1,232 @@
+.icon {
+  @include transition(all .3s ease);
+
+  &-menu {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    z-index: 105;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    min-width: 40px;
+    cursor: pointer;
+
+    &.active {
+      right: 25px;
+
+      .icon-bar {
+        width: 40px;
+
+        &:nth-child(1) {
+          top: 13px;
+          @include rotate(45deg);
+        }
+        &:nth-child(2) {
+          @include opacity(0);
+        }
+        &:nth-child(3) {
+          top: -13px;
+          @include rotate(-45deg);
+        }
+      }
+    }
+    .icon-bar {
+      position: relative;;
+      display: block;
+      width: 50px;
+      height: 5px;
+      margin-bottom: 8px;
+      background: $black;
+      border-radius: 0;
+
+      @include transition(all .3s ease);
+
+      @media (max-width: $screen-xs-max) {
+        width: 40px;
+      }
+    }
+  }
+  &-cross {
+    max-width: 42px;
+    max-height: 30px;
+    color: #272727;
+    cursor: pointer;
+  }
+  &-user {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  &-request {
+    max-width: 39px;
+    max-height: 49px;
+    color: #272727;
+  }
+  &-send {
+    max-width: 49px;
+    max-height: 37px;
+    color: #272727;
+    position: relative;
+    top: -4px;
+  }
+  &-finger {
+    max-width: 45px;
+    max-height: 47px;
+    color: #272727;
+    position: relative;
+    top: -4px;
+  }
+  &-circle {
+    display: block;
+    width: 101px;
+    height: 101px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 2px solid #202020;
+    text-align: center;
+    line-height: 80px;
+    line-height: 135px;
+  }
+  &-envelope {
+    max-width: 31px;
+    max-height: 23px;
+    color: $black;
+  }
+  &-key {
+    max-width: 31px;
+    max-height: 32px;
+    color: $black;
+  }
+  &-user-login {
+    max-width: 25px;
+    max-height: 31px;
+    color: $black;
+  }
+  &-phone {
+    max-width: 28px;
+    max-height: 28px;
+    color: $black;
+  }
+  &-check {
+    max-width: 33px;
+    max-height: 33px;
+    color: $black;
+  }
+  &-arrow {
+    &-left {
+      max-width: 55px;
+      max-height: 55px;
+      color: $black;
+    }
+  }
+  &-calendar {
+    max-width: 24px;
+    max-height: 24px;
+    color: $black;
+  }
+  &-people {
+    max-width: 41px;
+    max-height: 34px;
+    color: $black;
+  }
+  &-homes {
+    max-width: 47px;
+    max-height: 34px;
+    color: $black;
+  }
+  &-chat {
+    max-width: 34px;
+    max-height: 34px;
+    color: $black;
+  }
+  &-coin {
+    max-width: 35px;
+    max-height: 35px;
+    color: $black;
+  }
+  &-pen {
+    max-width: 15px;
+    max-height: 15px;
+    color: #868686;
+  }
+  &-bed {
+    max-width: 33px;
+    max-height: 21px;
+    color: #414141;
+  }
+  &-wifi {
+    max-width: 33px;
+    max-height: 24px;
+    color: #414141;
+  }
+  &-coffee {
+    max-width: 33px;
+    max-height: 33px;
+    color: #414141;
+  }
+  &-leaf {
+    max-width: 23px;
+    max-height: 33px;
+    color: #414141;
+  }
+  &-car {
+    max-width: 33px;
+    max-height: 24px;
+    color: #414141;
+  }
+  &-cutlery {
+    max-width: 19px;
+    max-height: 33px;
+    color: #414141;
+  }
+  &-clock {
+    max-width: 33px;
+    max-height: 33px;
+    color: #414141;
+  }
+  &-phone {
+    max-width: 33px;
+    max-height: 33px;
+    color: #414141;
+  }
+  &-desktop {
+    max-width: 33px;
+    max-height: 28px;
+    color: #414141;
+  }
+  &-attention {
+    max-width: 22px;
+    max-height: 18px;
+    color: $black;
+    top: 0;
+    left: -27px;
+  }
+  &-bookmark {
+    max-width: 14px;
+    max-height: 26px;
+    color: $black;
+    top: -3px;
+    left: -19px;
+  }
+  &-share {
+    max-width: 24px;
+    max-height: 26px;
+    color: $black;
+    top: -2px;
+    left: -29px;
+  }
+  &-update {
+    max-width: 24px;
+    max-height: 24px;
+    position: relative;
+    top: 5px;
+  }
+  &-marker {
+    max-width: 23px;
+    max-height: 35px;
+    position: relative;
+    top: 8px;
+    color: $black;
+  }
+}

@@ -1,0 +1,147 @@
+.reserve {
+	&-block {
+		padding: 15px 15px 0;
+		position: relative;
+		border: 1px solid $black;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+		img {
+			width: 100%;
+		}
+		.date {
+			text-align: right;
+			margin-bottom: 15px;
+		}
+		.attributes {
+			width: 53%;
+			float: left;
+
+			&.left {
+				width: 47%;
+				border-right: 1px solid $black;
+				padding-right: 5%;
+			}
+			&.right {
+				padding-left: 7%;
+			}
+			li {
+				margin-bottom: 15px;
+			}
+			.attr {
+				&-name {
+					display: inline-block;
+					font-weight: 600;
+					min-width: 70px;
+				}
+				&-value {
+
+				}
+			}
+			.price {
+				margin-bottom: 0;
+				line-height: 18px;
+			}
+			@media(max-width: $screen-sm-max) {
+				&.left {
+					width: 100%;
+					padding-right: 0;
+					padding-bottom: 10px;
+					border-right: 0;
+					border-bottom: 1px solid $black;
+					margin-bottom: 10px;
+				}
+				&.right {
+					width: 100%;
+					padding-left: 0;
+				}
+				li {
+					margin-bottom: 5px;
+				}
+			}
+		}
+		.show-request {
+			width: 100%;
+			max-width: 70%;
+			padding-left: 10px;
+			margin-left: auto;
+			text-align: right;
+			margin-bottom: 15px;
+
+			&.with-btns {
+				padding-top: 15px;
+				min-height: 50px;
+				text-align: left;
+
+				&:before,
+				&:after {
+					display: table;
+					content: " ";
+				}
+				.show-link {
+					position: relative;
+					top: 10px;
+					float: right;
+				}
+			}
+			@media(max-width: $screen-md-max) {
+				max-width: 60%;
+			}
+			@media(max-width: $screen-sm-max) {
+				padding-top: 10px;
+				margin-top: 10px;
+				border-top: 1px solid $black;
+				max-width: 100%;
+				padding-left: 0;
+
+				&.with-btns {
+					.show-link {
+						float: none;
+						text-align: right;
+						margin-bottom: 5px;
+					}
+				}
+				.show-link {
+					font-size: 20px;
+					display: block;
+				}
+			}
+		}
+		@media (max-width: $screen-sm-max) {
+			.date {
+				text-align: left;
+			}
+			.request-params {
+				border-bottom: 0;
+			}
+		}
+	}
+	&-thumb {
+		@media(min-width: $screen-md) {
+			width: 40%;
+		}
+		@media(min-width: $screen-lg) {
+			width: 30%;
+		}
+		@media(max-width: $screen-sm-max) {
+			margin-bottom: 20px;
+		}
+	}
+	&-content {
+		@media(min-width: $screen-md) {
+			width: 60%;
+		}
+		@media(min-width: $screen-lg) {
+			width: 70%;
+		}
+	}
+	&-request {
+		display: none;
+		min-width: 100%;
+
+		&.show {
+			display: block;
+		}
+	}
+}

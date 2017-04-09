@@ -1,0 +1,291 @@
+@@include('templates/_head.html', {
+	"title": "Запросы"
+})
+
+@@include('templates/_header_inline.html')
+
+									<div class="container pl-md-40">
+										<div class="row relative">
+											<div class="relative">
+												<a href="#" class="back content"><svg class="icon icon-arrow-left hidden-md hidden-lg"><use xlink:href="#icon-arrow-left"></use></svg></a>
+												<h1 class="col-md-offset-3 col-md-9 col-xs-12 text-center indent-55-md indent-55-sm indent-45-xs title-page">Запросы</h1>
+											</div>
+											<button type="button" class="icon icon-menu hidden-md hidden-lg">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+
+											<div class="col-md-3 sidebar">
+												@@include('./templates/_sidebar_lk_guest.html', {
+													"item": 1
+												})
+											</div>
+											<div class="col-md-9 col-xs-12 content">
+												<div class="">
+													<a href="requests.html" class="btn btn-primary btn-34 nothover mr-10 indent-25">Текущие запросы</a>
+													<a href="requests_history.html" class="btn btn-default nothover btn-34 indent-25">История запросов</a>
+												</div>
+												<div class="indent-20">
+													<a href="requests.html" class="btn btn-default fs-12">создать запрос</a>
+												</div>
+
+												<div class="request-block">
+													<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+													<div class="request-life">
+														<span class="no-life">Истек</span>
+													</div>
+													<div class="request-params">
+														<div class="row">
+															<div class="col-lg-4 col-xs-12">
+																<p class="heading-line">Основные параметры</p>
+																<div class="row">
+																	<div class="col-sm-9 col-xs-7">
+																		<ul class="list-none">
+																			<li>Город</li>
+																			<li>Заезд</li>
+																			<li>Выезд</li>
+																			<li>Количество гостей</li>
+																			<li>Количество спальных мест</li>
+																		</ul>
+																	</div>
+																	<div class="col-sm-3 col-xs-5">
+																		<ul class="list-none">
+																			<li>Минск</li>
+																			<li>18.09.2016</li>
+																			<li>28.09.2016</li>
+																			<li>3</li>
+																			<li>3</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-8 col-xs-12 pl-lg-80">
+																<p class="heading-line">Дополнительные параметры</p>
+																<div class="row flex">
+																	<ul class="col-xs-12 list-disk">
+																		<li>Кухня</li>
+																		<li>Интернет</li>
+																		<li>Телевизор</li>
+																		<li>Туалетные принадлежности</li>
+																	</ul>
+																	<ul class="col-xs-12 list-disk">
+																		<li>Лифт</li>
+																		<li>Камин</li>
+																		<li>Домофон</li>
+																		<li>Вахтер</li>
+																		<li>Бассейн</li>
+																	</ul>
+																	<ul class="col-xs-12 list-disk hidden-xs">
+																		<li>Отопление</li>
+																		<li>Кондиционер</li>
+																		<li>Стиральная машина</li>
+																		<li>Сушильная машина</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="map" class="request-map indent-25"></div>
+													<div class="request-buttons">
+														<div class="request-edit">
+
+														</div>
+														<div class="request-offers">
+															<a href="#" class="btn btn-default">Смотреть предложения</a>
+															<span class="request-offer">25</span>
+														</div>
+													</div>
+												</div>
+												<div class="request-block">
+													<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+													<div class="request-life">
+														<span class="no-life">Истек</span>
+													</div>
+													<div class="request-params">
+														<div class="row">
+															<div class="col-lg-4 col-xs-12">
+																<p class="heading-line">Основные параметры</p>
+																<div class="row">
+																	<div class="col-sm-9 col-xs-7">
+																		<ul class="list-none">
+																			<li>Город</li>
+																			<li>Заезд</li>
+																			<li>Выезд</li>
+																			<li>Количество гостей</li>
+																			<li>Количество спальных мест</li>
+																		</ul>
+																	</div>
+																	<div class="col-sm-3 col-xs-5">
+																		<ul class="list-none">
+																			<li>Минск</li>
+																			<li>18.09.2016</li>
+																			<li>28.09.2016</li>
+																			<li>3</li>
+																			<li>3</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-8 col-xs-12 pl-lg-80">
+																<p class="heading-line">Дополнительные параметры</p>
+																<div class="row flex">
+																	<ul class="col-xs-12 list-disk">
+																		<li>Кухня</li>
+																		<li>Интернет</li>
+																		<li>Телевизор</li>
+																		<li>Туалетные принадлежности</li>
+																	</ul>
+																	<ul class="col-xs-12 list-disk">
+																		<li>Лифт</li>
+																		<li>Камин</li>
+																		<li>Домофон</li>
+																		<li>Вахтер</li>
+																		<li>Бассейн</li>
+																	</ul>
+																	<ul class="col-xs-12 list-disk hidden-xs">
+																		<li>Отопление</li>
+																		<li>Кондиционер</li>
+																		<li>Стиральная машина</li>
+																		<li>Сушильная машина</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="map1" class="request-map indent-25"></div>
+													<div class="request-buttons">
+														<div class="request-edit">
+
+														</div>
+														<div class="request-offers">
+															<a href="#" class="btn btn-default">Смотреть предложения</a>
+															<span class="request-offer">25</span>
+														</div>
+													</div>
+												</div>
+												<div class="request-block">
+													<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+													<div class="request-life">
+														<span class="no-life">Истек</span>
+													</div>
+													<div class="request-params">
+														<div class="row">
+															<div class="col-lg-4 col-xs-12">
+																<p class="heading-line">Основные параметры</p>
+																<div class="row">
+																	<div class="col-sm-9 col-xs-7">
+																		<ul class="list-none">
+																			<li>Город</li>
+																			<li>Заезд</li>
+																			<li>Выезд</li>
+																			<li>Количество гостей</li>
+																			<li>Количество спальных мест</li>
+																		</ul>
+																	</div>
+																	<div class="col-sm-3 col-xs-5">
+																		<ul class="list-none">
+																			<li>Минск</li>
+																			<li>18.09.2016</li>
+																			<li>28.09.2016</li>
+																			<li>3</li>
+																			<li>3</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+															<div class="col-lg-8 col-xs-12 pl-lg-80">
+																<p class="heading-line">Дополнительные параметры</p>
+																<div class="row flex">
+																	<ul class="col-xs-12 list-disk">
+																		<li>Кухня</li>
+																		<li>Интернет</li>
+																		<li>Телевизор</li>
+																		<li>Туалетные принадлежности</li>
+																	</ul>
+																	<ul class="col-xs-12 list-disk">
+																		<li>Лифт</li>
+																		<li>Камин</li>
+																		<li>Домофон</li>
+																		<li>Вахтер</li>
+																		<li>Бассейн</li>
+																	</ul>
+																	<ul class="col-xs-12 list-disk hidden-xs">
+																		<li>Отопление</li>
+																		<li>Кондиционер</li>
+																		<li>Стиральная машина</li>
+																		<li>Сушильная машина</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div id="map2" class="request-map indent-25"></div>
+													<div class="request-buttons">
+														<div class="request-edit">
+
+														</div>
+														<div class="request-offers">
+															<a href="#" class="btn btn-default">Смотреть предложения</a>
+															<span class="request-offer">25</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+@@include('templates/_footer.html')
+
+<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&key=AIzaSyBlvEtlFzPHWJYwAqYxIdV_khpYDQiBmTA"></script>
+<script type="text/javascript">
+	var latLng = {lat: 53.90373, lng: 27.5530847},
+			marker_latLng = {lat: 53.90373, lng: 27.5530847};
+
+	var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 13,
+		center: latLng,
+		scrollwheel: false,
+		mapTypeControl: false
+	});
+	var map1 = new google.maps.Map(document.getElementById('map1'), {
+		zoom: 13,
+		center: latLng,
+		scrollwheel: false,
+		mapTypeControl: false
+	});
+	var map2 = new google.maps.Map(document.getElementById('map2'), {
+		zoom: 13,
+		center: latLng,
+		scrollwheel: false,
+		mapTypeControl: false
+	});
+
+	var image = {
+		url: 'img/svg/marker.svg',
+		size: new google.maps.Size(23, 35),
+		origin: new google.maps.Point(0, 0),
+		anchor: new google.maps.Point(0, 0)
+	};
+
+	var marker = new google.maps.Marker({
+		icon: image,
+		position: marker_latLng,
+		map: map,
+		title: ''
+	});
+	var marker = new google.maps.Marker({
+		icon: image,
+		position: marker_latLng,
+		map: map1,
+		title: ''
+	});
+	var marker = new google.maps.Marker({
+		icon: image,
+		position: marker_latLng,
+		map: map2,
+		title: ''
+	});
+</script>
+
+@@include('templates/_end.html')

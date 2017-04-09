@@ -1,0 +1,122 @@
+.profile {
+	&-menu {
+		position: absolute;
+		top: 4px;
+		right: 24px;
+		padding: 0 20px 20px;
+		cursor: pointer;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 20px;
+			right: 6px;
+			border-top: 7px solid $black;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+		}
+		&:hover {
+			.profile-list {
+				pointer-events: all;
+				@include opacity(1);
+			}
+		}
+	}
+	&-list {
+		position: absolute;
+		top: calc(100% - 11px);
+		right: -8px;
+		border: 1px solid $black;
+		padding: 10px 0;
+		min-width: 195px;
+		background: #fff;
+		pointer-events: none;
+		@include opacity(0);
+		@include transition(all .4s ease);
+
+		li {
+			a {
+				display: block;
+				padding: 4px 10px 4px 25px;
+				text-decoration: none;
+				letter-spacing: 1.2px;
+
+				&:hover {
+					color: $white;
+					background: $black;
+				}
+			}
+		}
+	}
+	&-block {
+		float: right;
+		text-align: right;
+		position: relative;
+
+		.thumb {
+			position: absolute;
+			top: 0;
+			left: -90px;
+			height: 70px;
+			width: 70px;
+			border-radius: 50%;
+
+			img {
+				height: 70px;
+				width: 70px;
+				border-radius: 50%;
+			}
+		}
+		.name {
+			margin-bottom: 10px;
+			margin-top: 5px;
+		}
+		.btn {
+			padding: 1px 15px 2px;
+		}
+	}
+	&-group {
+		position: relative;
+		margin-bottom: 10px;
+		@include flexbox();
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.change {
+			.form-profile {
+				&:hover {
+					background: transparent;
+				}
+			}
+			.edit {
+				position: absolute;
+				font-weight: 400;
+				color: $black;
+				top: 5px;
+				right: 0;
+			}
+			@media (max-width: 719px) {
+				.edit {
+					width: 50%;
+					margin-left: 50%;
+					padding: 0 5px;
+					float: right;
+					position: static;
+				}
+			}
+		}
+		span {
+			padding: 5px;
+			width: 50%;
+			font-size: 16px;
+			color: #1f0d07;
+			font-weight: 500;
+			display: block;
+			cursor: pointer;
+		}
+		@media (max-width: 719px) {
+			@include flex-wrap(wrap);
+		}
+	}
+}

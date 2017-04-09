@@ -1,0 +1,435 @@
+@@include('templates/_head.html', {
+	"title": "Бронирования"
+})
+
+@@include('templates/_header_inline.html')
+
+									<div class="container pl-md-40">
+										<div class="row relative">
+											<div class="relative">
+												<a href="#" class="back content"><svg class="icon icon-arrow-left hidden-md hidden-lg"><use xlink:href="#icon-arrow-left"></use></svg></a>
+												<h1 class="col-md-offset-3 col-md-9 col-xs-12 text-center indent-55-md indent-55-sm indent-45-xs title-page">Бронирования</h1>
+											</div>
+											<button type="button" class="icon icon-menu hidden-md hidden-lg">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+
+											<div class="col-md-3 sidebar">
+												@@include('./templates/_sidebar_lk_guest.html', {
+													"item": 3
+												})
+											</div>
+											<div class="col-md-9 col-xs-12 content">
+												<div class="btn-nav">
+													<a href="reservation.html" class="btn btn-primary btn-34 mr-10 indent-25">Бронирования</a>
+													<a href="reservation_waiting.html" class="btn btn-primary btn-34 mr-10 indent-25">Ожидает подтверждения</a>
+													<a href="reservation_finished.html" class="btn btn-default nothover btn-34 mr-10 indent-25">Завершенные</a>
+													<a href="reservation_canceled.html" class="btn btn-primary btn-34 indent-25">Отмененные</a>
+												</div>
+
+												<div class="reserve-block">
+													<div class="row">
+														<div class="col-md-3 col-sm-6 col-xs-12 reserve-thumb">
+															<img src="img/reserve1.jpg" alt="">
+														</div>
+														<div class="col-md-9 col-sm-6 col-xs-12 reserve-content">
+															<div class="date">Дата запроса  18.06.2016</div>
+															<ul class="attributes left">
+																<li>
+																	<span class="attr-name">Имя:</span>
+																	<span class="attr-value"><a href="#">Константин Сидоров</a></span>
+																</li>
+																<li>
+																	<span class="attr-name">E-mail:</span>
+																	<span class="attr-value">Sidiriv@mail.com</span>
+																</li>
+																<li>
+																	<span class="attr-name">Тел.:</span>
+																	<span class="attr-value">+38 056 245 25 26</span>
+																</li>
+															</ul>
+															<ul class="attributes right">
+																<li>
+																	<span class="attr-name">Срок:</span>
+																	<span class="attr-value">10 дней</span>
+																</li>
+																<li>
+																	<span class="attr-name">Цена:</span>
+																	<span class="attr-value"><span class="price">2000 <small>руб.<span>/сутки</span></small></span></span>
+																</li>
+																<li>
+																	<span class="attr-name">Статус:</span>
+																	<span class="attr-value"><a href="#">Текущее</a></span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="show-request with-btns">
+														<a href="#" class="btn btn-default mr-10 indent-10-xs">Отзыв</a>
+														<a href="#" class="btn btn-default indent-10-xs">Повторить бронирование</a>
+														<a href="#" class="show-link">Скрыть запрос</a>
+													</div>
+													<div class="reserve-request" style="display: block">
+														<div class="request-info">
+															Запрос
+														</div>
+														<div class="request-params">
+															<div class="row">
+																<div class="col-md-4 col-xs-12">
+																	<p class="heading-line">Основные параметры</p>
+																	<div class="row">
+																		<div class="col-sm-9 col-xs-7">
+																			<ul class="list-none">
+																				<li>Город</li>
+																				<li>Заезд</li>
+																				<li>Выезд</li>
+																				<li>Количество гостей</li>
+																				<li>Количество спальных мест</li>
+																			</ul>
+																		</div>
+																		<div class="col-sm-3 col-xs-5">
+																			<ul class="list-none">
+																				<li>Минск</li>
+																				<li>18.09.2016</li>
+																				<li>28.09.2016</li>
+																				<li>3</li>
+																				<li>3</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-8 col-xs-12 pl-md-80">
+																	<p class="heading-line">Дополнительные параметры</p>
+																	<div class="row flex">
+																		<ul class="col-xs-12 flex-1 list-disk">
+																			<li>Кухня</li>
+																			<li>Интернет</li>
+																			<li>Телевизор</li>
+																			<li>Туалетные принадлежности</li>
+																		</ul>
+																		<ul class="col-xs-12 flex-1 list-disk">
+																			<li>Лифт</li>
+																			<li>Камин</li>
+																			<li>Домофон</li>
+																			<li>Вахтер</li>
+																			<li>Бассейн</li>
+																		</ul>
+																		<ul class="col-xs-12 flex-1 list-disk hidden-xs">
+																			<li>Отопление</li>
+																			<li>Кондиционер</li>
+																			<li>Стиральная машина</li>
+																			<li>Сушильная машина</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="reserve-block">
+													<div class="row">
+														<div class="col-md-3 col-sm-6 col-xs-12 reserve-thumb">
+															<img src="img/reserve2.jpg" alt="">
+														</div>
+														<div class="col-md-9 col-sm-6 col-xs-12 reserve-content">
+															<div class="date">Дата запроса  18.06.2016</div>
+															<ul class="attributes left">
+																<li>
+																	<span class="attr-name">Имя:</span>
+																	<span class="attr-value"><a href="#">Константин Сидоров</a></span>
+																</li>
+																<li>
+																	<span class="attr-name">E-mail:</span>
+																	<span class="attr-value">Sidiriv@mail.com</span>
+																</li>
+																<li>
+																	<span class="attr-name">Тел.:</span>
+																	<span class="attr-value">+38 056 245 25 26</span>
+																</li>
+															</ul>
+															<ul class="attributes right">
+																<li>
+																	<span class="attr-name">Срок:</span>
+																	<span class="attr-value">10 дней</span>
+																</li>
+																<li>
+																	<span class="attr-name">Цена:</span>
+																	<span class="attr-value"><span class="price">2000 <small>руб.<span>/сутки</span></small></span></span>
+																</li>
+																<li>
+																	<span class="attr-name">Статус:</span>
+																	<span class="attr-value"><a href="#">Текущее</a></span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="show-request with-btns">
+														<a href="#" class="btn btn-default mr-10 indent-10-xs">Отзыв</a>
+														<a href="#" class="btn btn-default indent-10-xs">Повторить бронирование</a>
+														<a href="#" class="show-link">Показать запрос</a>
+													</div>
+													<div class="reserve-request">
+														<div class="request-info">
+															Запрос
+														</div>
+														<div class="request-params">
+															<div class="row">
+																<div class="col-md-4 col-xs-12">
+																	<p class="heading-line">Основные параметры</p>
+																	<div class="row">
+																		<div class="col-sm-9 col-xs-7">
+																			<ul class="list-none">
+																				<li>Город</li>
+																				<li>Заезд</li>
+																				<li>Выезд</li>
+																				<li>Количество гостей</li>
+																				<li>Количество спальных мест</li>
+																			</ul>
+																		</div>
+																		<div class="col-sm-3 col-xs-5">
+																			<ul class="list-none">
+																				<li>Минск</li>
+																				<li>18.09.2016</li>
+																				<li>28.09.2016</li>
+																				<li>3</li>
+																				<li>3</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-8 col-xs-12 pl-md-80">
+																	<p class="heading-line">Дополнительные параметры</p>
+																	<div class="row flex">
+																		<ul class="col-xs-12 flex-1 list-disk">
+																			<li>Кухня</li>
+																			<li>Интернет</li>
+																			<li>Телевизор</li>
+																			<li>Туалетные принадлежности</li>
+																		</ul>
+																		<ul class="col-xs-12 flex-1 list-disk">
+																			<li>Лифт</li>
+																			<li>Камин</li>
+																			<li>Домофон</li>
+																			<li>Вахтер</li>
+																			<li>Бассейн</li>
+																		</ul>
+																		<ul class="col-xs-12 flex-1 list-disk hidden-xs">
+																			<li>Отопление</li>
+																			<li>Кондиционер</li>
+																			<li>Стиральная машина</li>
+																			<li>Сушильная машина</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="reserve-block">
+													<div class="row">
+														<div class="col-md-3 col-sm-6 col-xs-12 reserve-thumb">
+															<img src="img/reserve3.jpg" alt="">
+														</div>
+														<div class="col-md-9 col-sm-6 col-xs-12 reserve-content">
+															<div class="date">Дата запроса  18.06.2016</div>
+															<ul class="attributes left">
+																<li>
+																	<span class="attr-name">Имя:</span>
+																	<span class="attr-value"><a href="#">Константин Сидоров</a></span>
+																</li>
+																<li>
+																	<span class="attr-name">E-mail:</span>
+																	<span class="attr-value">Sidiriv@mail.com</span>
+																</li>
+																<li>
+																	<span class="attr-name">Тел.:</span>
+																	<span class="attr-value">+38 056 245 25 26</span>
+																</li>
+															</ul>
+															<ul class="attributes right">
+																<li>
+																	<span class="attr-name">Срок:</span>
+																	<span class="attr-value">10 дней</span>
+																</li>
+																<li>
+																	<span class="attr-name">Цена:</span>
+																	<span class="attr-value"><span class="price">2000 <small>руб.<span>/сутки</span></small></span></span>
+																</li>
+																<li>
+																	<span class="attr-name">Статус:</span>
+																	<span class="attr-value"><a href="#">Текущее</a></span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="show-request with-btns">
+														<a href="#" class="btn btn-default mr-10 indent-10-xs">Отзыв</a>
+														<a href="#" class="btn btn-default indent-10-xs">Повторить бронирование</a>
+														<a href="#" class="show-link">Показать запрос</a>
+													</div>
+													<div class="reserve-request">
+														<div class="request-info">
+															Запрос
+														</div>
+														<div class="request-params">
+															<div class="row">
+																<div class="col-md-4 col-xs-12">
+																	<p class="heading-line">Основные параметры</p>
+																	<div class="row">
+																		<div class="col-sm-9 col-xs-7">
+																			<ul class="list-none">
+																				<li>Город</li>
+																				<li>Заезд</li>
+																				<li>Выезд</li>
+																				<li>Количество гостей</li>
+																				<li>Количество спальных мест</li>
+																			</ul>
+																		</div>
+																		<div class="col-sm-3 col-xs-5">
+																			<ul class="list-none">
+																				<li>Минск</li>
+																				<li>18.09.2016</li>
+																				<li>28.09.2016</li>
+																				<li>3</li>
+																				<li>3</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-8 col-xs-12 pl-md-80">
+																	<p class="heading-line">Дополнительные параметры</p>
+																	<div class="row flex">
+																		<ul class="col-xs-12 flex-1 list-disk">
+																			<li>Кухня</li>
+																			<li>Интернет</li>
+																			<li>Телевизор</li>
+																			<li>Туалетные принадлежности</li>
+																		</ul>
+																		<ul class="col-xs-12 flex-1 list-disk">
+																			<li>Лифт</li>
+																			<li>Камин</li>
+																			<li>Домофон</li>
+																			<li>Вахтер</li>
+																			<li>Бассейн</li>
+																		</ul>
+																		<ul class="col-xs-12 flex-1 list-disk hidden-xs">
+																			<li>Отопление</li>
+																			<li>Кондиционер</li>
+																			<li>Стиральная машина</li>
+																			<li>Сушильная машина</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="reserve-block">
+													<div class="row">
+														<div class="col-md-3 col-sm-6 col-xs-12 reserve-thumb">
+															<img src="img/reserve1.jpg" alt="">
+														</div>
+														<div class="col-md-9 col-sm-6 col-xs-12 reserve-content">
+															<div class="date">Дата запроса  18.06.2016</div>
+															<ul class="attributes left">
+																<li>
+																	<span class="attr-name">Имя:</span>
+																	<span class="attr-value"><a href="#">Константин Сидоров</a></span>
+																</li>
+																<li>
+																	<span class="attr-name">E-mail:</span>
+																	<span class="attr-value">Sidiriv@mail.com</span>
+																</li>
+																<li>
+																	<span class="attr-name">Тел.:</span>
+																	<span class="attr-value">+38 056 245 25 26</span>
+																</li>
+															</ul>
+															<ul class="attributes right">
+																<li>
+																	<span class="attr-name">Срок:</span>
+																	<span class="attr-value">10 дней</span>
+																</li>
+																<li>
+																	<span class="attr-name">Цена:</span>
+																	<span class="attr-value"><span class="price">2000 <small>руб.<span>/сутки</span></small></span></span>
+																</li>
+																<li>
+																	<span class="attr-name">Статус:</span>
+																	<span class="attr-value"><a href="#">Текущее</a></span>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="show-request with-btns">
+														<a href="#" class="btn btn-default mr-10 indent-10-xs">Отзыв</a>
+														<a href="#" class="btn btn-default indent-10-xs">Повторить бронирование</a>
+														<a href="#" class="show-link">Показать запрос</a>
+													</div>
+													<div class="reserve-request">
+														<div class="request-info">
+															Запрос
+														</div>
+														<div class="request-params">
+															<div class="row">
+																<div class="col-md-4 col-xs-12">
+																	<p class="heading-line">Основные параметры</p>
+																	<div class="row">
+																		<div class="col-sm-9 col-xs-7">
+																			<ul class="list-none">
+																				<li>Город</li>
+																				<li>Заезд</li>
+																				<li>Выезд</li>
+																				<li>Количество гостей</li>
+																				<li>Количество спальных мест</li>
+																			</ul>
+																		</div>
+																		<div class="col-sm-3 col-xs-5">
+																			<ul class="list-none">
+																				<li>Минск</li>
+																				<li>18.09.2016</li>
+																				<li>28.09.2016</li>
+																				<li>3</li>
+																				<li>3</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-8 col-xs-12 pl-md-80">
+																	<p class="heading-line">Дополнительные параметры</p>
+																	<div class="row flex">
+																		<ul class="col-xs-12 flex-1 list-disk">
+																			<li>Кухня</li>
+																			<li>Интернет</li>
+																			<li>Телевизор</li>
+																			<li>Туалетные принадлежности</li>
+																		</ul>
+																		<ul class="col-xs-12 flex-1 list-disk">
+																			<li>Лифт</li>
+																			<li>Камин</li>
+																			<li>Домофон</li>
+																			<li>Вахтер</li>
+																			<li>Бассейн</li>
+																		</ul>
+																		<ul class="col-xs-12 flex-1 list-disk hidden-xs">
+																			<li>Отопление</li>
+																			<li>Кондиционер</li>
+																			<li>Стиральная машина</li>
+																			<li>Сушильная машина</li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+
+@@include('templates/_footer.html')
+
+@@include('templates/_end.html')

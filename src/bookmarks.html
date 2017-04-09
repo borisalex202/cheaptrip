@@ -1,0 +1,280 @@
+@@include('templates/_head.html', {
+	"title": "Закладки"
+})
+
+@@include('templates/_header_inline.html')
+
+									<div class="container pl-md-40">
+										<div class="row relative">
+											<div class="relative">
+												<a href="#" class="back content"><svg class="icon icon-arrow-left hidden-md hidden-lg"><use xlink:href="#icon-arrow-left"></use></svg></a>
+												<h1 class="col-md-offset-3 col-md-9 col-xs-12 text-center indent-55-md indent-55-sm indent-45-xs title-page">Закладки</h1>
+											</div>
+											<button type="button" class="icon icon-menu hidden-md hidden-lg">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+
+											<div class="col-md-3 sidebar">
+												@@include('./templates/_sidebar_lk_guest.html', {
+													"item": 2
+												})
+											</div>
+											<div class="col-md-9 col-xs-12 content">
+												<div class="indent-20">
+													<div class="sort-enable">
+														<div class="row">
+															<div class="col-lg-2 col-md-3 col-xs-12"><span class="name">Город:</span> <span class="value">Минск</span></div>
+															<div class="col-lg-4 col-md-5 col-xs-12"><span class="name">Дата выезда:</span> <span class="value">01.10.16 - 03.10.16</span></div>
+															<div class="col-lg-3 col-md-3 col-xs-12"><span class="name">Кол-во комнат:</span> <span class="value">2</span></div>
+														</div>
+													</div>
+													<div class="bookmark">
+														<div class="col-md-3 col-xs-12 bookmark-thumb">
+															<span>
+																<img src="img/bookmark1.png" alt="">
+															</span>
+														</div>
+														<div class="col-md-2 col-xs-12 bookmark-map" id="bookmark_map1"></div>
+														<div class="col-md-7 col-xs-12 bookmark-content">
+															<ul class="bookmark-functions">
+																<li><i class="fa fa-bed" aria-hidden="true" title="Спальное место"></i></li>
+																<li><i class="fa fa-wifi" aria-hidden="true" title="Wifi"></i></li>
+																<li><i class="fa fa-coffee" aria-hidden="true" title="Кофеварка"></i></li>
+																<li><i class="fa fa-leaf" aria-hidden="true" title="Природа"></i></li>
+																<li><i class="fa fa-car" aria-hidden="true" title="Парковка"></i></li>
+																<li><i class="fa fa-cutlery" aria-hidden="true" title="Кухня"></i></li>
+																<li><i class="fa fa-clock-o" aria-hidden="true" title="Часы"></i></li>
+																<li><i class="fa fa-phone" aria-hidden="true" title="Телефон"></i></li>
+																<li><i class="fa fa-desktop" aria-hidden="true" title="Компьютер"></i></li>
+															</ul>
+															<div class="content">
+																<div class="description">
+																	<p class="title">Г. Минск ул. Иванова,34 кв 24</p>
+																	<p>Уютная квартира со всеми удобствами для комфортного проживания. Находится в историческом сердце города. В пешей доступности от дома, самые известные</p>
+																</div>
+																<div class="info">
+																	<span class="price">2000 <small>руб<span>/сутки</span></small></span>
+																	<button type="button" class="btn btn-default">Хочу забронировать</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="bookmark">
+														<div class="col-md-3 col-xs-12 bookmark-thumb">
+															<span>
+																<img src="img/bookmark1.png" alt="">
+															</span>
+														</div>
+														<div class="col-md-2 col-xs-12 bookmark-map" id="bookmark_map2"></div>
+														<div class="col-md-7 col-xs-12 bookmark-content">
+															<ul class="bookmark-functions">
+																<li><i class="fa fa-bed" aria-hidden="true" title="Спальное место"></i></li>
+																<li><i class="fa fa-wifi" aria-hidden="true" title="Wifi"></i></li>
+																<li><i class="fa fa-coffee" aria-hidden="true" title="Кофеварка"></i></li>
+																<li><i class="fa fa-leaf" aria-hidden="true" title="Природа"></i></li>
+																<li><i class="fa fa-car" aria-hidden="true" title="Парковка"></i></li>
+																<li><i class="fa fa-cutlery" aria-hidden="true" title="Кухня"></i></li>
+																<li><i class="fa fa-clock-o" aria-hidden="true" title="Часы"></i></li>
+																<li><i class="fa fa-phone" aria-hidden="true" title="Телефон"></i></li>
+																<li><i class="fa fa-desktop" aria-hidden="true" title="Компьютер"></i></li>
+															</ul>
+															<div class="content">
+																<div class="description">
+																	<p class="title">Г. Минск ул. Иванова,34 кв 24</p>
+																	<p>Уютная квартира со всеми удобствами для комфортного проживания. Находится в историческом сердце города. В пешей доступности от дома, самые известные</p>
+																</div>
+																<div class="info">
+																	<span class="price">2000 <small>руб<span>/сутки</span></small></span>
+																	<button type="button" class="btn btn-default">Хочу забронировать</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="bookmark">
+													<div class="col-md-3 col-xs-12 bookmark-thumb">
+														<span>
+															<img src="img/bookmark1.png" alt="">
+														</span>
+													</div>
+													<div class="col-md-2 col-xs-12 bookmark-map" id="bookmark_map3"></div>
+													<div class="col-md-7 col-xs-12 bookmark-content">
+														<ul class="bookmark-functions">
+															<li><i class="fa fa-bed" aria-hidden="true" title="Спальное место"></i></li>
+															<li><i class="fa fa-wifi" aria-hidden="true" title="Wifi"></i></li>
+															<li><i class="fa fa-coffee" aria-hidden="true" title="Кофеварка"></i></li>
+															<li><i class="fa fa-leaf" aria-hidden="true" title="Природа"></i></li>
+															<li><i class="fa fa-car" aria-hidden="true" title="Парковка"></i></li>
+															<li><i class="fa fa-cutlery" aria-hidden="true" title="Кухня"></i></li>
+															<li><i class="fa fa-clock-o" aria-hidden="true" title="Часы"></i></li>
+															<li><i class="fa fa-phone" aria-hidden="true" title="Телефон"></i></li>
+															<li><i class="fa fa-desktop" aria-hidden="true" title="Компьютер"></i></li>
+														</ul>
+														<div class="content">
+															<div class="description">
+																<p class="title">Г. Минск ул. Иванова,34 кв 24</p>
+																<p>Уютная квартира со всеми удобствами для комфортного проживания. Находится в историческом сердце города. В пешей доступности от дома, самые известные</p>
+															</div>
+															<div class="info">
+																<span class="price">2000 <small>руб<span>/сутки</span></small></span>
+																<button type="button" class="btn btn-default">Хочу забронировать</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												<div class="indent-20">
+													<div class="sort-enable">
+														<div class="row">
+															<div class="col-lg-2 col-md-3 col-xs-12"><span class="name">Город:</span> <span class="value">Минск</span></div>
+															<div class="col-lg-4 col-md-5 col-xs-12"><span class="name">Дата выезда:</span> <span class="value">08.10.16 - 10.10.16</span></div>
+															<div class="col-lg-3 col-md-3 col-xs-12"><span class="name">Кол-во комнат:</span> <span class="value">3</span></div>
+														</div>
+													</div>
+													<div class="bookmark">
+														<div class="col-md-3 col-xs-12 bookmark-thumb">
+															<span>
+																<img src="img/bookmark1.png" alt="">
+															</span>
+														</div>
+														<div class="col-md-2 col-xs-12 bookmark-map" id="bookmark_map4"></div>
+														<div class="col-md-7 col-xs-12 bookmark-content">
+															<ul class="bookmark-functions">
+																<li><i class="fa fa-bed" aria-hidden="true" title="Спальное место"></i></li>
+																<li><i class="fa fa-wifi" aria-hidden="true" title="Wifi"></i></li>
+																<li><i class="fa fa-coffee" aria-hidden="true" title="Кофеварка"></i></li>
+																<li><i class="fa fa-leaf" aria-hidden="true" title="Природа"></i></li>
+																<li><i class="fa fa-car" aria-hidden="true" title="Парковка"></i></li>
+																<li><i class="fa fa-cutlery" aria-hidden="true" title="Кухня"></i></li>
+																<li><i class="fa fa-clock-o" aria-hidden="true" title="Часы"></i></li>
+																<li><i class="fa fa-phone" aria-hidden="true" title="Телефон"></i></li>
+																<li><i class="fa fa-desktop" aria-hidden="true" title="Компьютер"></i></li>
+															</ul>
+															<div class="content">
+																<div class="description">
+																	<p class="title">Г. Минск ул. Иванова,34 кв 24</p>
+																	<p>Уютная квартира со всеми удобствами для комфортного проживания. Находится в историческом сердце города. В пешей доступности от дома, самые известные</p>
+																</div>
+																<div class="info">
+																	<span class="price">2000 <small>руб<span>/сутки</span></small></span>
+																	<button type="button" class="btn btn-default">Хочу забронировать</button>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="bookmark with-border">
+														<div class="col-md-3 col-xs-12 bookmark-thumb">
+															<span>
+																<img src="img/bookmark1.png" alt="">
+															</span>
+														</div>
+														<div class="col-md-2 col-xs-12 bookmark-map" id="bookmark_map5"></div>
+														<div class="col-md-7 col-xs-12 bookmark-content">
+															<ul class="bookmark-functions">
+																<li><i class="fa fa-bed" aria-hidden="true" title="Спальное место"></i></li>
+																<li><i class="fa fa-wifi" aria-hidden="true" title="Wifi"></i></li>
+																<li><i class="fa fa-coffee" aria-hidden="true" title="Кофеварка"></i></li>
+																<li><i class="fa fa-leaf" aria-hidden="true" title="Природа"></i></li>
+																<li><i class="fa fa-car" aria-hidden="true" title="Парковка"></i></li>
+																<li><i class="fa fa-cutlery" aria-hidden="true" title="Кухня"></i></li>
+																<li><i class="fa fa-clock-o" aria-hidden="true" title="Часы"></i></li>
+																<li><i class="fa fa-phone" aria-hidden="true" title="Телефон"></i></li>
+																<li><i class="fa fa-desktop" aria-hidden="true" title="Компьютер"></i></li>
+															</ul>
+															<div class="content">
+																<div class="description">
+																	<p class="title">Г. Минск ул. Иванова,34 кв 24</p>
+																	<p>Уютная квартира со всеми удобствами для комфортного проживания. Находится в историческом сердце города. В пешей доступности от дома, самые известные</p>
+																</div>
+																<div class="info">
+																	<span class="price">2000 <small>руб<span>/сутки</span></small></span>
+																	<button type="button" class="btn btn-default">Хочу забронировать</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												@@include('templates/_pagination.html')
+											</div>
+										</div>
+									</div>
+
+@@include('templates/_footer.html')
+
+<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&key=AIzaSyBlvEtlFzPHWJYwAqYxIdV_khpYDQiBmTA"></script>
+<script type="text/javascript">
+	var latLng = {lat: 53.90373, lng: 27.5530847},
+			marker_latLng = {lat: 53.90373, lng: 27.5530847};
+
+	var map1 = new google.maps.Map(document.getElementById('bookmark_map1'), {
+		zoom: 13,
+		center: latLng,
+		scrollwheel: false,
+		mapTypeControl: false
+	});
+	var map2 = new google.maps.Map(document.getElementById('bookmark_map2'), {
+		zoom: 13,
+		center: latLng,
+		scrollwheel: false,
+		mapTypeControl: false
+	});
+	var map3 = new google.maps.Map(document.getElementById('bookmark_map3'), {
+		zoom: 13,
+		center: latLng,
+		scrollwheel: false,
+		mapTypeControl: false
+	});
+	var map4 = new google.maps.Map(document.getElementById('bookmark_map4'), {
+		zoom: 13,
+		center: latLng,
+		scrollwheel: false,
+		mapTypeControl: false
+	});
+	var map5 = new google.maps.Map(document.getElementById('bookmark_map5'), {
+		zoom: 13,
+		center: latLng,
+		scrollwheel: false,
+		mapTypeControl: false
+	});
+
+	var image = {
+		url: 'img/svg/marker.svg',
+		size: new google.maps.Size(23, 35),
+		origin: new google.maps.Point(0, 0),
+		anchor: new google.maps.Point(0, 0)
+	};
+
+	var marker = new google.maps.Marker({
+		icon: image,
+		position: marker_latLng,
+		map: map1,
+		title: ''
+	});
+	var marker = new google.maps.Marker({
+		icon: image,
+		position: marker_latLng,
+		map: map2,
+		title: ''
+	});
+	var marker = new google.maps.Marker({
+		icon: image,
+		position: marker_latLng,
+		map: map3,
+		title: ''
+	});
+	var marker = new google.maps.Marker({
+		icon: image,
+		position: marker_latLng,
+		map: map4,
+		title: ''
+	});
+	var marker = new google.maps.Marker({
+		icon: image,
+		position: marker_latLng,
+		map: map5,
+		title: ''
+	});
+</script>
+
+@@include('templates/_end.html')

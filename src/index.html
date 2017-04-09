@@ -1,0 +1,129 @@
+@@include('templates/_head.html', {
+	"title": "CheapTrip - главная"
+})
+@@include('templates/_header_big.html')
+			<div class="container">
+				<p class="fs-28 lh-36 text-semibold text-uppercase text-center ls-1-7 indent-45">Забронируй квартиру за 60 секунд, <br>сэкономь до 50% стоимости</p>
+
+				<div class="row indent-10">
+					<select class="col-md-offset-2 col-md-6 col-xs-12 city with-search choice-city" data-placeholder="Город" data-search="true">
+						<option></option>
+						<option value="" data-map="[53.9037327,27.5530847]">Минск</option>
+						<option value="" data-map="[52.0964127,23.7079561]">Брест</option>
+						<option value="" data-map="[53.6693895,23.8194785]">Гродно</option>
+						<option value="" data-map="[55.1845563,30.2026697]">Витебск</option>
+					</select>
+					<a href="index_step2.html" class="btn btn-default ">Продолжить</a>
+				</div>
+			</div>
+
+			<div class="indent-90 map-main">
+				<div id="map" class="map"></div>
+				<input type="text" placeholder="Введите зону поиска в м." class="form-control map-zoom">
+			</div>
+
+			<div class="container">
+				<div class="col-md-offset-1 col-md-10 col-xs-12 info-steps">
+					<div class="col-xs-4 text-center step">
+						<span class="icon icon-circle indent-20"><svg class="icon icon-request"><use xlink:href="#icon-request"></use></svg></span>
+						<p class="info-steps-sm fs-22-sm lh-22-sm text-semibold text-uppercase indent-15">Сформируйте <br>запрос</p>
+						<p class="info-steps-sm fs-13 lh-18 indent-0">Задайте параметры <br>квартиры</p>
+					</div>
+					<div class="col-xs-4 text-center step">
+						<span class="icon icon-circle indent-20"><svg class="icon icon-send"><use xlink:href="#icon-send"></use></svg></span>
+						<p class="info-steps-sm fs-22-sm lh-22-sm text-semibold text-uppercase indent-15">Мы отправим ваш <br>запрос хозяевам</p>
+						<p class="info-steps-sm fs-13 lh-18 indent-0">Квартиры соответсвующие <br>вашим поисковым <br>требованиям</p>
+					</div>
+					<div class="col-xs-4 text-center step last">
+						<span class="icon icon-circle indent-20"><svg class="icon icon-finger"><use xlink:href="#icon-finger"></use></svg></span>
+						<p class="info-steps-sm fs-22-sm lh-22-sm text-semibold text-uppercase indent-15">Получите и выберите <br>лучшее предложение</p>
+						<p class="info-steps-sm fs-13 lh-18 indent-0">Вы сможете отфильтровать <br>для себя лучшее <br>предложение</p>
+					</div>
+					<div class="col-xs-12 info-steps-xs">
+						<p class="fs-28 lh-24 text-semibold text-uppercase indent-15">Сформируйте запрос</p>
+						<p class="fs-18 lh-18 indent-0">Задайте параметры квартиры</p>
+					</div>
+				</div>
+			</div>
+@@include('templates/_modals.html',{
+	"register_guest": "true",
+	"register_master": "true",
+	"thanks": "true"
+})
+@@include('templates/_footer.html')
+				<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+				<script>
+					var selected = 0,
+						geolocation = ymaps.geolocation;
+					$('.city')
+						.on('change', function(){
+							var getLatLng = $(this).find('option:selected').data('map'),
+								getName = $(this).find('option:selected').text();
+
+							if(selected == 0) {
+								$('.map-main').addClass('active');
+								setTimeout(function () {
+									ymaps.ready(init(getLatLng, getName));
+								}, 100);
+								console.log('Инициализация');
+
+								selected = 1;
+							}
+						})
+						.on('click', function () {
+							$(this).find('.jq-selectbox__search input').focus();
+						});
+
+					$('.map-zoom').on('change', function () {
+						m = $(this).val();
+
+						if(m > 0 && m <= 200) {
+							myMap.setZoom(19);
+						} else if (m > 200 && m <= 500) {
+							myMap.setZoom(18);
+						} else if (m > 500 && m <= 900) {
+							myMap.setZoom(17);
+						} else if (m > 900 && m <= 1400) {
+							myMap.setZoom(16);
+						} else if (m > 1400 && m <= 2500) {
+							myMap.setZoom(15);
+						} else if (m > 2500 && m <= 4000) {
+							myMap.setZoom(14);
+						} else if (m > 4000 && m <= 6500) {
+							myMap.setZoom(13);
+						}
+					});
+					$('.city').on('change', function(){
+						var getLatLng = $(this).find('option:selected').data('map');
+
+						if(selected == 1) {
+							myPlacemark.geometry.setCoordinates(getLatLng);
+							myMap.setCenter(getLatLng);
+						}
+					});
+
+					var myMap,
+						myPlacemark;
+
+					function init(coordinates, cityName){
+						myMap = new ymaps.Map("map", {
+							center: coordinates,
+							zoom: 15,
+							behaviors: ['drag'],
+							controls: []
+						});
+
+						myPlacemark = new ymaps.Placemark(coordinates, {
+							hintContent: cityName,
+							balloonContent: ''
+						}, {
+							iconLayout: 'default#image',
+							iconImageHref: 'img/svg/marker.svg',
+							iconImageSize: [23, 35],
+							iconImageOffset: [0, -30]
+						});
+
+						myMap.geoObjects.add(myPlacemark);
+					}
+				</script>
+@@include('templates/_end.html')

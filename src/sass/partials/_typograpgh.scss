@@ -1,0 +1,338 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: $link-decoration;
+  color: $link-color;
+  @include transition(all .3s ease);
+
+  &.hover,
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+  &.link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .icon {
+    margin-right: 10px;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family;
+  color: $head-color;
+  margin-top: 0;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+p {
+  color: $paragraph-color;
+  font-size: $font-size;
+  line-height: 19px;
+}
+strong {
+  font-weight: 700;
+}
+ol {
+  li {
+    margin: 0 0 10px;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 20px 25px 13px;
+  outline: none !important;
+  @include transition(all .5s ease);
+}
+select {
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+
+  &.form-control {
+    max-height: none !important;
+    height: inherit;
+  }
+}
+.content {
+  p {
+    color: $paragraph-color;
+    line-height: 21px;
+    margin-bottom: 23px;
+  }
+}
+.list {
+  &-disk {
+    margin-bottom: 25px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 13px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 2px;
+        width: 6px;
+        height: 6px;
+        background: $main-color;
+      }
+    }
+  }
+  &-none {
+    margin-bottom: 25px;
+
+    li {
+      margin-bottom: 13px;
+    }
+  }
+}
+.jq-selectbox {
+  &.no-padding-h {
+    .jq-selectbox__dropdown {
+      margin-left: 0;
+    }
+  }
+  &.sm {
+    .jq-selectbox__select {
+      height: 34px;
+      line-height: 30px;
+      padding: 0 45px 0 15px;
+      border: 1px solid $black;
+    }
+    .jq-selectbox__trigger-arrow {
+      top: 14px;
+    }
+    &.focused,
+    &:active {
+      .jq-selectbox__select {
+        border: 1px solid $black;
+        box-shadow: none;
+      }
+    }
+  }
+  &.focused,
+  &:active {
+    .jq-selectbox__select {
+      border: 2px solid $black;
+      box-shadow: none;
+    }
+  }
+  &__select {
+    border: 2px solid $black;
+    height: 56px;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 45px 10px 15px;
+
+    &:hover {
+      border: 2px solid $black;
+      background: #fff;
+    }
+    &-text {
+      font-family: $font-family;
+      font-size: 15px;
+    }
+  }
+  &__trigger {
+    border-left: 0;
+
+    &-arrow {
+      top: 23px;
+      border-top: 5px solid $black;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        border-top: 5px solid $white;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+      }
+    }
+  }
+  &__dropdown {
+    margin: 5px 0 0 15px;
+    box-shadow: none;
+    max-width: 75%;
+    background: $main-color;
+    border: 0;
+    border-radius: 0;
+    padding: 5px;
+
+    li {
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 17px;
+      border: 0;
+      border-bottom: 1px solid $border-color;
+      outline: none !important;
+      white-space: normal;
+      @include transition(all .3s ease);
+
+      &.selected,
+      &:hover {
+        background-color: $white;
+        color: $main-color;
+      }
+      &.sel:not(:last-child) {
+        border: 0;
+        border-bottom: 1px solid $border-color;
+        box-shadow: none;
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+.form {
+  &-group {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.with-icon {
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+
+        &-envelope {
+          margin-top: -11px;
+        }
+        &-key {
+          margin-top: -16px;
+        }
+        &-user-login {
+          margin-top: -15px;
+        }
+        &-phone {
+          margin-top: -14px;
+        }
+        &-check {
+          margin-top: -16px;
+        }
+        &-calendar {
+          margin-top: -12px;
+        }
+      }
+    }
+  }
+  &-control {
+    padding: 17px 10px;
+    max-height: 56px;
+    border: 2px solid $black;
+    border-radius: 0;
+    height: auto;
+    outline: none;
+    @include placeholder{
+      color: $placeholder-color;
+      font-size: 15px;
+    };
+
+    &-b1 {
+      .form-control {
+        border: 1px solid $black;
+      }
+    }
+    &.sm {
+      padding: 9px 10px;
+      max-height: 37px;
+      border: 1px solid $black;
+    }
+    &:focus {
+      border-color: $black;
+      box-shadow: none;
+    }
+  }
+  &-profile {
+    padding: 5px 9% 5px 5px;
+    width: 50%;
+    border: 0;
+    border-radius: 0;
+    height: auto;
+    outline: none;
+    font-weight: 500;
+    background-position: 95% center;
+    @include placeholder{
+      color: $placeholder-color;
+      font-size: 15px;
+      font-weight: 500;
+    };
+    &:hover {
+      background: url('../img/svg/pen.svg') no-repeat;
+      background-position: 95% center;
+    }
+  }
+  &-upload {
+    font-weight: 300;
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      font-weight: 300;
+      line-height: 24px;
+      color: #868686;
+    }
+    .jq-file {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      box-shadow: none;
+      border: 0;
+      border-radius: 0;
+
+      &:hover {
+        .jq-file__name {
+          color: $black;
+          background: $white;
+        }
+      }
+      &__browse {
+        display: none;
+      }
+      &__name {
+        padding: 10px 30px;
+        border: 2px solid $black;
+        background: $black;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        box-shadow: none;
+        border-radius: 0;
+        height: auto;
+        @include transition(all .4s ease);
+
+        @media (max-width: $screen-xs-max) {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

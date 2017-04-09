@@ -1,0 +1,289 @@
+@@include('templates/_head.html', {
+	"title": "Ответы"
+})
+
+@@include('templates/_header_inline.html')
+
+									<div class="container pl-md-40">
+										<div class="row relative">
+											<div class="relative">
+												<a href="#" class="back content"><svg class="icon icon-arrow-left"><use xlink:href="#icon-arrow-left"></use></svg></a>
+												<h1 class="col-md-offset-3 col-md-9 col-xs-12 text-center indent-55-md indent-55-sm indent-45-xs title-page">Ответы</h1>
+											</div>
+											<button type="button" class="icon icon-menu hidden-md hidden-lg">
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+
+											<div class="col-md-3 sidebar">
+												@@include('./templates/_sidebar_lk_guest.html', {
+													"item": 1
+												})
+											</div>
+											<div class="col-md-9 col-xs-12 content">
+												<div class="request-info">
+													Ваш запрос
+													<span class="date">Дата запроса  18.06.2016</span>
+												</div>
+												<div class="request-params indent-20">
+													<div class="row">
+														<div class="col-md-4 col-xs-12">
+															<p class="heading-line">Основные параметры</p>
+															<div class="row">
+																<div class="col-sm-9 col-xs-7">
+																	<ul class="list-none">
+																		<li>Город</li>
+																		<li>Заезд</li>
+																		<li>Выезд</li>
+																		<li>Количество гостей</li>
+																		<li>Количество спальных мест</li>
+																	</ul>
+																</div>
+																<div class="col-sm-3 col-xs-5">
+																	<ul class="list-none">
+																		<li>Минск</li>
+																		<li>18.09.2016</li>
+																		<li>28.09.2016</li>
+																		<li>3</li>
+																		<li>3</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-8 col-xs-12 pl-md-80">
+															<p class="heading-line">Дополнительные параметры</p>
+															<div class="row flex">
+																<ul class="col-xs-12 flex-1 list-disk">
+																	<li>Кухня</li>
+																	<li>Интернет</li>
+																	<li>Телевизор</li>
+																	<li>Туалетные принадлежности</li>
+																</ul>
+																<ul class="col-xs-12 flex-1 list-disk">
+																	<li>Лифт</li>
+																	<li>Камин</li>
+																	<li>Домофон</li>
+																	<li>Вахтер</li>
+																	<li>Бассейн</li>
+																</ul>
+																<ul class="col-xs-12 flex-1 list-disk hidden-xs">
+																	<li>Отопление</li>
+																	<li>Кондиционер</li>
+																	<li>Стиральная машина</li>
+																	<li>Сушильная машина</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row text-center-xs">
+													<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+														<a href="#" class="btn btn-default full-xs indent-20">Новый запрос</a>
+													</div>
+													<div class="col-sm-offset-0 col-sm-8 col-xs-offset-2 col-xs-8 text-right">
+														<a href="#" class="btn btn-primary full-xs indent-20 mr-sm-20">Изменить запрос</a>
+														<a href="#" class="btn btn-default full-xs indent-20">Удалить запрос</a>
+													</div>
+												</div>
+												<div id="map" class="apartment-map"></div>
+												<div class="row">
+													<div class="flex flex-wrap flex-swap-xs-max">
+														<div class="col-sm-4 col-xs-12 indent-20-xs">
+															<a href="#" class="link"><svg class="icon icon-update"><use xlink:href="#icon-update"></use></svg>Обновить</a>
+														</div>
+														<div class="col-sm-8 col-xs-12">
+															<div class="request-life right">
+																<span class="title">До конца жизни запроса:</span>
+																<span class="life-item days">
+																	<span class="number">2</span>
+																	<span class="text">дней</span>
+																</span>
+																<span class="life-item hours">
+																	<span class="number">12</span>
+																	<span class="text">часов</span>
+																</span>
+																<span class="life-item minutes">
+																	<span class="number">25</span>
+																	<span class="text">минут</span>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="request-info">
+													Ответы
+												</div>
+												<div class="sort-light indent-20">
+													<span class="title">Сортировать: </span>
+													<span class="sort-toggle">По цене</span>
+													<span class="sort-toggle">По удаленности от метки</span>
+												</div>
+												<div class="bookmark full">
+													<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+													<div class="col-md-5 col-xs-12 bookmark-thumb">
+														<span>
+															<img src="img/bookmak2.jpg" alt="">
+														</span>
+													</div>
+													<div class="col-md-7 col-xs-12 bookmark-content">
+														<ul class="bookmark-functions">
+															<li><i class="fa fa-bed" aria-hidden="true" title="Спальное место"></i></li>
+															<li><i class="fa fa-wifi" aria-hidden="true" title="Wifi"></i></li>
+															<li><i class="fa fa-coffee" aria-hidden="true" title="Кофеварка"></i></li>
+															<li><i class="fa fa-leaf" aria-hidden="true" title="Природа"></i></li>
+															<li><i class="fa fa-car" aria-hidden="true" title="Парковка"></i></li>
+															<li><i class="fa fa-cutlery" aria-hidden="true" title="Кухня"></i></li>
+															<li><i class="fa fa-clock-o" aria-hidden="true" title="Часы"></i></li>
+															<li><i class="fa fa-phone" aria-hidden="true" title="Телефон"></i></li>
+															<li><i class="fa fa-desktop" aria-hidden="true" title="Компьютер"></i></li>
+														</ul>
+														<div class="content">
+															<div class="description">
+																<p class="title">Г. Минск ул. Иванова,34 кв 24</p>
+																<p>Уютная квартира со всеми удобствами для комфортного проживания. Находится в историческом сердце города. В пешей доступности от дома, самые известные</p>
+															</div>
+															<div class="info">
+																<span class="price">2000 <small>руб<span>/сутки</span></small></span><br>
+																<div class="btn-tools">
+																	<a href="apartment.html" class="btn btn-default indent-10">Подробнее</a><br>
+																	<a href="#" class="btn btn-primary">В закладки</a>
+																</div>
+																<button type="button" class="btn btn-default reserve" data-toggle="modal" data-target="#reservation">Хочу забронировать</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="bookmark full">
+													<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+													<div class="col-md-5 col-xs-12 bookmark-thumb">
+														<span>
+															<img src="img/bookmak2.jpg" alt="">
+														</span>
+													</div>
+													<div class="col-md-7 col-xs-12 bookmark-content">
+														<ul class="bookmark-functions">
+															<li><i class="fa fa-bed" aria-hidden="true" title="Спальное место"></i></li>
+															<li><i class="fa fa-wifi" aria-hidden="true" title="Wifi"></i></li>
+															<li><i class="fa fa-coffee" aria-hidden="true" title="Кофеварка"></i></li>
+															<li><i class="fa fa-leaf" aria-hidden="true" title="Природа"></i></li>
+															<li><i class="fa fa-car" aria-hidden="true" title="Парковка"></i></li>
+															<li><i class="fa fa-cutlery" aria-hidden="true" title="Кухня"></i></li>
+															<li><i class="fa fa-clock-o" aria-hidden="true" title="Часы"></i></li>
+															<li><i class="fa fa-phone" aria-hidden="true" title="Телефон"></i></li>
+															<li><i class="fa fa-desktop" aria-hidden="true" title="Компьютер"></i></li>
+														</ul>
+														<div class="content">
+															<div class="description">
+																<p class="title">Г. Минск ул. Иванова,34 кв 24</p>
+																<p>Уютная квартира со всеми удобствами для комфортного проживания. Находится в историческом сердце города. В пешей доступности от дома, самые известные</p>
+															</div>
+															<div class="info">
+																<span class="price">2000 <small>руб<span>/сутки</span></small></span><br>
+																<div class="btn-tools">
+																	<a href="apartment.html" class="btn btn-default indent-10">Подробнее</a><br>
+																	<a href="#" class="btn btn-primary">В закладки</a>
+																</div>
+																<button type="button" class="btn btn-default reserve" data-toggle="modal" data-target="#reservation">Хочу забронировать</button>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="bookmark full">
+													<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+													<div class="col-md-5 col-xs-12 bookmark-thumb">
+														<span>
+															<img src="img/bookmak2.jpg" alt="">
+														</span>
+													</div>
+													<div class="col-md-7 col-xs-12 bookmark-content">
+														<ul class="bookmark-functions">
+															<li><i class="fa fa-bed" aria-hidden="true" title="Спальное место"></i></li>
+															<li><i class="fa fa-wifi" aria-hidden="true" title="Wifi"></i></li>
+															<li><i class="fa fa-coffee" aria-hidden="true" title="Кофеварка"></i></li>
+															<li><i class="fa fa-leaf" aria-hidden="true" title="Природа"></i></li>
+															<li><i class="fa fa-car" aria-hidden="true" title="Парковка"></i></li>
+															<li><i class="fa fa-cutlery" aria-hidden="true" title="Кухня"></i></li>
+															<li><i class="fa fa-clock-o" aria-hidden="true" title="Часы"></i></li>
+															<li><i class="fa fa-phone" aria-hidden="true" title="Телефон"></i></li>
+															<li><i class="fa fa-desktop" aria-hidden="true" title="Компьютер"></i></li>
+														</ul>
+														<div class="content">
+															<div class="description">
+																<p class="title">Г. Минск ул. Иванова,34 кв 24</p>
+																<p>Уютная квартира со всеми удобствами для комфортного проживания. Находится в историческом сердце города. В пешей доступности от дома, самые известные</p>
+															</div>
+															<div class="info">
+																<span class="price">2000 <small>руб<span>/сутки</span></small></span><br>
+																<div class="btn-tools">
+																	<a href="apartment.html" class="btn btn-default indent-10">Подробнее</a><br>
+																	<a href="#" class="btn btn-primary">В закладки</a>
+																</div>
+																<button type="button" class="btn btn-default reserve" data-toggle="modal" data-target="#reservation">Хочу забронировать</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+@@include('templates/_modals.html',{
+	"reservation": "true",
+	"thanks_reservation": "true"
+})
+
+@@include('templates/_footer.html')
+
+				<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&key=AIzaSyBlvEtlFzPHWJYwAqYxIdV_khpYDQiBmTA"></script>
+				<script type="text/javascript">
+					var latLng = {lat: 53.90373, lng: 27.5530847},
+							marker_latLng = {lat: 53.90373, lng: 27.5530847};
+
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 13,
+						center: latLng,
+						scrollwheel: false,
+						mapTypeControl: false
+					});
+
+					var image = {
+						url: 'img/svg/marker.svg',
+						size: new google.maps.Size(23, 35),
+						origin: new google.maps.Point(0, 0),
+						anchor: new google.maps.Point(0, 0)
+					};
+
+					var marker = new google.maps.Marker({
+						icon: image,
+						position: marker_latLng,
+						map: map,
+						title: ''
+					});
+					var marker = new google.maps.Marker({
+						icon: image,
+						position: {lat: 53.90973, lng: 27.5530847},
+						map: map,
+						title: ''
+					});
+					var marker = new google.maps.Marker({
+						icon: image,
+						position: {lat: 53.90973, lng: 27.5580847},
+						map: map,
+						title: ''
+					});
+					var marker = new google.maps.Marker({
+						icon: image,
+						position: {lat: 53.90173, lng: 27.5640847},
+						map: map,
+						title: ''
+					});
+					var marker = new google.maps.Marker({
+						icon: image,
+						position: {lat: 53.90673, lng: 27.5840847},
+						map: map,
+						title: ''
+					});
+				</script>
+
+@@include('templates/_end.html')

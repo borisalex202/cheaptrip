@@ -1,0 +1,158 @@
+/* Fonts */
+$font-family-sans-serif:  'Open Sans', sans-serif;
+$font-family:             'Open Sans', sans-serif;
+$font-family-second:      'Raleway', sans-serif;
+$font-size:               15px;
+
+/* Main */
+$main-color:            #1F0D08;
+$secodn-color:          #B1C116;
+$white:                 #fff;
+$black:                 #000;
+
+$head-color:            #000;
+$paragraph-color:       #292929;
+$placeholder-color:     #868686;
+
+$border-color:          #5c5c5c;
+
+$screen-xs:                  420px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  720px;
+$screen-sm-min:              $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Small screen / tablet
+$container-tablet:             (670px + $grid-gutter-width);
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+/* Links */
+$link-color:            #000;
+$link-hover-color:      $link-color;
+$link-decoration:       underline;
+$link-hover-decoration: none;
+
+/* Buttons */
+$btn-default-bg:        $black;
+$btn-default-bg-hover:  $white;
+
+$btn-primary-bg:        $white;
+$btn-primary-bg-hover:  $black;
+
+// Widgets
+$widget-colors: (
+  white   : #fff,
+  green   : #D8E8E4,
+  blue    : #EAEFFA
+);
+
+// Info blocks
+$info-colors: (
+  white   : #fff,
+  yellow  : #FFF7D8,
+  blue    : #EAEFFA,
+  green   : #D8E8E4
+);
+$info-sizes: (
+  335     : 335px,
+  370     : 370px
+);
+
+// Datepicker
+$datepickerDayCellSize: 40px !default;
+$datepickerWidth: 350px !default;
+$datepickerMinBodyHeight: 170px !default;
+$datepickerBorderRadius: 0px !default;
+$datepickerPadding: 10px !default;
+$datepickerZIndex: 100 !default;
+
+$datepickerFontFamily: 'Open Sans' !default;
+$datepickerFontSize: 15px !default;
+
+$datepickerYearsPerRow: 4 !default;
+
+$datepickerTextColor: (
+  button: #5cc4ef,
+  otherMonth: #7d7d7d,
+  otherMonthInRange: #ccc,
+  disabled: #aeaeae,
+  currentDate: #fff,
+  common: #fff,
+  dayNames: #fff,
+  navArrows: #fff
+) !default;
+
+$datepickerBG: (
+  selected: #FEC83D,
+  selectedHover: darken(#FEC83D, 5),
+  inRange: rgba(#5cc4ef, .1),
+  hover: #FEC83D
+) !default;
+
+$datepickerBorderColor: (
+  nav: #494949,
+  inline: #d7d7d7,
+  default: #dbdbdb
+) !default;
+
+$datepickerNavigationHeight: 45px !default;
+$datepickerNavigationButtonsOffset: 2px !default;
+
+$datepickerPointerSize: 10px !default;
+$datepickerPointerOffset: 0px !default;
+
+// Transitions
+$datepickerTransitionSpeed: .3s !default;
+$datepickerTransitionEase: ease !default;
+$datepickerTransitionOffset: 8px !default;
+
+// Objects
+%otherMonth {
+  color: map_get($datepickerTextColor, otherMonth);
+
+  &:hover {
+    color: darken(map_get($datepickerTextColor, otherMonth), 10);
+  }
+
+  &.-disabled- {
+    &.-focus- {
+      color: map_get($datepickerTextColor, otherMonth);
+    }
+  }
+
+  &.-selected- {
+    color: #fff;
+    background: lighten(map_get($datepickerBG, selected), 15);
+    &.-focus- {
+      background: lighten(map_get($datepickerBG, selected), 10);
+    }
+  }
+
+  &.-in-range- {
+    background-color: map_get($datepickerBG, inRange);
+    color: darken(map_get($datepickerTextColor, otherMonth), 7);
+
+    &.-focus- {
+      background-color: rgba(map_get($datepickerBG, inRange), .2);
+    }
+  }
+
+
+  &:empty {
+    background: none;
+    border: none;
+  }
+}

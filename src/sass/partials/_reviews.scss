@@ -1,0 +1,165 @@
+.review {
+	&-rating {
+		&-block {
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			text-align: right;
+
+			.date {
+				color: #a4a4a4;
+			}
+			@media (max-width: 719px) {
+				position: static;
+				text-align: left;
+
+				.review-rating {
+					display: inline-block;
+					margin-right: 18px;
+					margin-top: 10px;
+
+					li {
+						font-size: 10px;
+						margin-top: 3px;
+					}
+				}
+			}
+			@media (max-width: 400px) {
+				text-align: center;
+			}
+		}
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 2px;
+
+			.fa-star {
+				color: #FDC02F;
+
+				&.o {
+					color: #CECECE;
+				}
+			}
+		}
+	}
+	&-block {
+		border: 1px solid $black;
+		padding: 15px 25px;
+		margin-bottom: 50px;
+		position: relative;
+	}
+	&-head {
+		border-bottom: 1px solid $black;
+		padding-bottom: 15px;
+		margin-bottom: 20px;
+
+		.thumb {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 20px;
+		}
+		.names {
+			display: inline-block;
+			vertical-align: top;
+			padding: 10px 0;
+		}
+		.title {
+			color: #3e3e3e;
+			font-size: 18px;
+			margin-bottom: 15px;
+			font-weight: 600;
+		}
+		.name {
+			color: #3e3e3e;
+			font-size: 14px;
+			margin-bottom: 0;
+		}
+		@media (max-width: 719px) {
+			.names {
+				padding: 0;
+				max-width: 240px;
+			}
+			.title {
+				font-size: 20px;
+				line-height: 18px;
+			}
+		}
+		@media (max-width: 400px) {
+			.thumb {
+				display: block;
+				text-align: center;
+				margin: 0 auto 15px;
+			}
+			.names {
+				text-align: center;
+				padding: 0;
+				max-width: none;
+			}
+		}
+	}
+	&-body {
+
+		p {
+			margin: 0;
+		}
+	}
+	&-footer {
+		border-top: 1px solid $black;
+		padding-top: 15px;
+		margin-top: 20px;
+
+		img {
+			max-width: 50px;
+			max-height: 50px;
+			margin-bottom: 10px;
+			border-radius: 50%;
+		}
+		p {
+			margin: 0;
+		}
+		.form-control {
+			border: 1px solid transparent;
+			box-shadow: none;
+			padding: 0 10px;
+			@include transition(all .5s ease);
+
+			&:focus {
+				border: 1px solid $black;
+				padding: 10px;
+			}
+		}
+		.send {
+			text-align: right;
+			padding-top: 40px;
+		}
+		@media (max-width: $screen-sm-max) {
+			.send {
+				border-top: 1px solid $black;
+				padding-top: 15px;
+				margin-top: 20px;
+				margin-left: 15px;
+				width: calc(100% - 30px);
+				padding-right: 0;
+			}
+		}
+		@media (max-width: 400px) {
+			div {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+
+				&:first-child {
+					margin-bottom: 20px;
+				}
+			}
+			.form-control {
+				border: 1px solid $black;
+				padding: 10px;
+			}
+			.send {
+				margin-left: 0;
+				width: 100%;
+			}
+		}
+	}
+}
