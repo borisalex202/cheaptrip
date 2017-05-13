@@ -152,3 +152,27 @@
               </div>
             </div>
             }
+            @@if ( context.cancel_reservation === 'true') {
+            <div class="modal fade" id="cancel_reservation" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <svg class="icon icon-cross" data-dismiss="modal"><use xlink:href="#icon-cross"></use></svg>
+                  </div>
+                  <div class="modal-body text-center">
+                    <p class="fs-18 lh-24 text-bold">Отменить бронирование?</p>
+                    <br>
+                    <div class="row">
+                      <div class="col-sm-5 col-sm-offset-1">
+                        <button type="button" class="btn btn-default indent-30 fs-12" data-dismiss="modal">Да, отменить</button>
+                      </div>
+                      <div class="col-sm-5">
+                        <button type="button" class="btn btn-default indent-30 fs-12" data-dismiss="modal">Нет, не отменять</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            }

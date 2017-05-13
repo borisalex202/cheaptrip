@@ -112,6 +112,16 @@
 			right: 0;
 			height: 500px;
 
+			.close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+				background: url('../img/close.png') no-repeat;
+				background-size: cover;
+			}
 			@media (max-width: $screen-sm-max) {
 				height: 450px;
 			}
@@ -120,7 +130,19 @@
 			}
 		}
 		&:not(:first-child) {
+			position: relative;
 			margin: 0 20px 20px 0;
+
+			.close {
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				background: url('../img/close.png') no-repeat;
+				background-size: cover;
+			}
 		}
 		@media (max-width: $screen-sm-max) {
 			width: 30.1%;

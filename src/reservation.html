@@ -30,6 +30,7 @@
 												</div>
 
 												<div class="reserve-block">
+													<button class="reserve-cancel" data-toggle="modal" data-target="#cancel_reservation"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
 													<div class="row">
 														<div class="col-md-3 col-sm-6 col-xs-12 reserve-thumb">
 															<img src="img/reserve1.jpg" alt="">
@@ -130,6 +131,7 @@
 													</div>
 												</div>
 												<div class="reserve-block">
+													<button class="reserve-cancel" data-toggle="modal" data-target="#cancel_reservation"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
 													<div class="row">
 														<div class="col-md-3 col-sm-6 col-xs-12 reserve-thumb">
 															<img src="img/reserve2.jpg" alt="">
@@ -230,6 +232,7 @@
 													</div>
 												</div>
 												<div class="reserve-block">
+													<button class="reserve-cancel" data-toggle="modal" data-target="#cancel_reservation"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
 													<div class="row">
 														<div class="col-md-3 col-sm-6 col-xs-12 reserve-thumb">
 															<img src="img/reserve3.jpg" alt="">
@@ -330,6 +333,7 @@
 													</div>
 												</div>
 												<div class="reserve-block">
+													<button class="reserve-cancel" data-toggle="modal" data-target="#cancel_reservation"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></button>
 													<div class="row">
 														<div class="col-md-3 col-sm-6 col-xs-12 reserve-thumb">
 															<img src="img/reserve1.jpg" alt="">
@@ -433,6 +437,10 @@
 											</div>
 										</div>
 									</div>
+
+@@include('templates/_modals.html', {
+"cancel_reservation": "true"
+})
 
 @@include('templates/_footer.html')
 

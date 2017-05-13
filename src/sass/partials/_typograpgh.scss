@@ -77,6 +77,11 @@ textarea {
     line-height: 21px;
     margin-bottom: 23px;
   }
+  .checkbox {
+    span {
+      border: 1px solid #000;
+    }
+  }
 }
 .list {
   &-disk {
@@ -114,7 +119,7 @@ textarea {
   }
   &.sm {
     .jq-selectbox__select {
-      height: 34px;
+      height: 38px;
       line-height: 30px;
       padding: 0 45px 0 15px;
       border: 1px solid $black;
@@ -242,6 +247,15 @@ textarea {
         }
       }
     }
+    &.sm {
+      margin-bottom: 10px;
+
+      .checkbox {
+        span {
+          border: 1px solid #000;
+        }
+      }
+    }
   }
   &-control {
     padding: 17px 10px;
@@ -262,8 +276,14 @@ textarea {
     }
     &.sm {
       padding: 9px 10px;
-      max-height: 37px;
+      max-height: 38px;
       border: 1px solid $black;
+    }
+    &.auto-width {
+      width: auto;
+    }
+    &.w-125 {
+      max-width: 125px;
     }
     &:focus {
       border-color: $black;
@@ -335,4 +355,27 @@ textarea {
       }
     }
   }
+  &-label {
+    width: 50%;
+    padding-right: 20px;
+  }
+  &-error {
+    .form {
+      &-control {
+        border-color: #FC252D;
+      }
+    }
+    .error-icon {
+      display: inline-block;
+    }
+  }
+}
+.error-icon {
+  display: none;
+  margin-left: 10px;
+  width: 28px;
+  height: 30px;
+  vertical-align: middle;
+  background: url('../img/error-input.png') no-repeat;
+  background-size: contain;
 }

@@ -74,7 +74,7 @@
 							$(this).find('.jq-selectbox__search input').focus();
 						});
 
-					$('.map-zoom').on('change', function () {
+					$('.map-zoom').on('keyup', function () {
 						m = $(this).val();
 
 						if(m > 0 && m <= 200) {

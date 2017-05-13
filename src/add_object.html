@@ -57,82 +57,467 @@
                             <div class="col-md-5 col-sm-7 col-xs-12"><input type="text" class="form-control"
                                                                             placeholder="Минимальная стоимость"></div>
                         </div>
+
+                        <div class="form-group">
+                            <strong>Общие параметры</strong>
+                        </div>
                         <div class="row indent-20">
                             <div class="flex flex-wrap">
-                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="col-sm-6 col-xs-12 indent-30-md indent-10-sm">
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Дом</span>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" checked>
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group flex align-items-center sm form-error">
+                                        <span class="form-label">Площадь квартиры</span>
+                                        <input type="text" class="form-control sm w-125">
+                                        <span class="error-icon"></span>
+                                    </div>
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Количество ванных комнат</span>
+                                        <input type="text" class="form-control sm w-125">
+                                    </div>
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Количество комнат</span>
+                                        <select class="select sm">
+                                            <option value="">1 комната</option>
+                                            <option value="">2 комнаты</option>
+                                            <option value="">3 комнаты</option>
+                                            <option value="">4 комнаты</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Количество спален</span>
+                                        <input type="text" class="form-control sm w-125">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Квартира</span>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" checked>
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Кухня</span>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="" checked>
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Этаж</span>
+                                        <input type="text" class="form-control sm w-125">
+                                    </div>
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Лифт</span>
+                                        <label class="checkbox">
+                                            <input type="checkbox" value="">
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group flex align-items-center sm">
+                                        <span class="form-label">Максимальное количество гостей</span>
+                                        <input type="text" class="form-control sm w-125">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="special-container">
+                            <div class="text-right">
+                                <a href="#" class="add-link add-special add-bedroom-special">Добавить спальню</a>
+                            </div>
+                            <div class="special-block">
+                                <div class="request-info">
+                                    1 Спальня
+                                </div>
+                                <div class="special-content bg-gray">
+                                    <div class="indent-40">
+                                        <div class="indent-10 special-row">
+                                            <div class="row">
+                                                <div class="flex flex-wrap align-items-center">
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">Кровать</div>
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">
+                                                        <select class="select sm full" data-placeholder=" ">
+                                                            <option value=""></option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4 col-xs-12">
+                                                        <a href="#" class="add-link add-bedroom" onclick="addBedroom(event, this);">Добавить кровать</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bedroom"></div>
+                                        <div class="indent-10 special-row">
+                                            <div class="row">
+                                                <div class="flex flex-wrap align-items-center">
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">Диван кровать</div>
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">
+                                                        <select class="select sm full" data-placeholder=" ">
+                                                            <option value=""></option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4 col-xs-12">
+                                                        <a href="#" class="add-link add-sofa" onclick="addSofa(event, this);">Добавить диван кровать</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sofa"></div>
+                                        <div class="indent-10 special-row">
+                                            <div class="row">
+                                                <div class="flex flex-wrap align-items-center">
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">Кушетка</div>
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">
+                                                        <select class="select sm full" data-placeholder=" ">
+                                                            <option value=""></option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4 col-xs-12">
+                                                        <a href="#" class="add-link add-couch" onclick="addCouch(event, this);">Добавить кушетку</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="couch"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-6">
+                                            <label class="checkbox">
+                                                <input type="checkbox" value="" checked> Интернет Wi-Fi
+                                                <span></span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value=""> Кондиционер
+                                                <span></span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value=""> Балкон/терраса
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-6">
+                                            <label class="checkbox">
+                                                <input type="checkbox" value=""> Парковка
+                                                <span></span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value=""> Бойлер
+                                                <span></span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value="" checked> Отопление
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="special-container">
+                            <div class="text-right">
+                                <a href="#" class="add-link add-special add-guest-special">Добавить гостинную</a>
+                            </div>
+                            <div class="special-block">
+                                <div class="request-info">
+                                    Гостинная
+                                </div>
+                                <div class="special-content bg-gray">
+                                    <div class="indent-40">
+                                        <div class="indent-10 special-row">
+                                            <div class="row">
+                                                <div class="flex flex-wrap align-items-center">
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">Количество диванов</div>
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">
+                                                        <input type="text" class="form-control sm w-125">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="indent-10 special-row">
+                                            <div class="row">
+                                                <div class="flex flex-wrap align-items-center">
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">Диван кровать</div>
+                                                    <div class="col-md-3 col-xs-12 indent-10-sm">
+                                                        <select class="select sm full" data-placeholder=" ">
+                                                            <option value=""></option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                            <option value="">-</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-4 col-xs-12">
+                                                        <a href="#" class="add-link add-sofa" onclick="addSofa(event, this);">Добавить диван кровать</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sofa"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-xs-6">
+                                            <label class="checkbox">
+                                                <input type="checkbox" value="" checked> TV
+                                                <span></span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value=""> Кондиционер
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-6">
+                                            <label class="checkbox">
+                                                <input type="checkbox" value=""> Парковка
+                                                <span></span>
+                                            </label>
+                                            <label class="checkbox">
+                                                <input type="checkbox" value=""> Бойлер
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-4 col-xs-6">
+                                            <label class="checkbox">
+                                                <input type="checkbox" value=""> Балкон/терраса
+                                                <span></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <strong>Общее описание квартиры</strong>
+                        </div>
+                        <div class="row indent-20">
+                            <div class="flex flex-wrap">
+                                <div class="col-sm-4 col-xs-6">
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check1" value="" checked> Кухня
+                                        <input type="checkbox" value="" checked> Интернет Wi-Fi
                                         <span></span>
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check2" value=""> Интернет
+                                        <input type="checkbox" value=""> Кондиционер
                                         <span></span>
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check3" value=""> Телевизор
+                                        <input type="checkbox" value=""> Балкон/терраса
                                         <span></span>
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check4" value=""> Туалетные принадлежности
+                                        <input type="checkbox" value=""> Сейф
                                         <span></span>
                                     </label>
                                 </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="col-sm-4 col-xs-6">
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check5" value=""> Лифт
+                                        <input type="checkbox" value=""> Парковка
                                         <span></span>
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check6" value=""> Камин
+                                        <input type="checkbox" value=""> Бойлер
                                         <span></span>
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check7" value="" checked> Домофон
+                                        <input type="checkbox" value="" checked> Отопление
                                         <span></span>
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check8" value="" checked> Вахтер
-                                        <span></span>
-                                    </label>
-                                </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6">
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="check9" value=""> Отопление
-                                        <span></span>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="check10" value=""> Кондиционер
-                                        <span></span>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="check11" value="" checked> Стиральная машина
-                                        <span></span>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="check12" value=""> Сушильная машина
+                                        <input type="checkbox" value="" checked> Спутниковое ТВ
                                         <span></span>
                                     </label>
                                 </div>
-                                <div class="col-md-3 col-sm-4 col-xs-6 hidden-sm">
+                                <div class="col-sm-4 col-xs-6">
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check13" value=""> Отопление
+                                        <input type="checkbox" value=""> Утюг и гладильные принадлежности
                                         <span></span>
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check14" value=""> Кондиционер
+                                        <input type="checkbox" value=""> Постельное белье
                                         <span></span>
                                     </label>
                                     <label class="checkbox">
-                                        <input type="checkbox" id="check15" value="" checked> Стиральная машина
-                                        <span></span>
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" id="check16" value=""> Сушильная машина
+                                        <input type="checkbox" value="" checked> Стиральная машина
                                         <span></span>
                                     </label>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <strong>Ванная комната</strong>
+                        </div>
+                        <div class="row indent-20">
+                            <div class="flex flex-wrap">
+                                <div class="col-sm-4 col-xs-6">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked> джакузи
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> фен
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> ванна
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-4 col-xs-6">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> душевая кабина
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> полотенца
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked> шампунь/гель для душа/мыло
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-4 col-xs-6">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> Халат
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> Тапочки
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked> Биде
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <strong>Кухня</strong>
+                        </div>
+                        <div class="row indent-20">
+                            <div class="flex flex-wrap">
+                                <div class="col-sm-4 col-xs-6">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked> микроволновая печь
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> посуда
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> кастрюли/сковорода
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> плита
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-4 col-xs-6">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> духовой шкаф
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> холодильник
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked> кофемашина
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked> кофеварка
+                                        <span></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-4 col-xs-6">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> тостер
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> посудомоечная машина
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value="" checked> чайник
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <strong>Дополнительно</strong>
+                        </div>
+                        <div class="row indent-20">
+                            <div class="flex flex-wrap">
+                                <div class="col-md-4 col-sm-6 col-xs-12 indent-20-sm">
+                                    <div class="form-group flex align-items-center">
+                                        <span class="form-label">Время выезда</span>
+                                        <select class="select sm">
+                                            <option value="">12:00</option>
+                                            <option value="">13:00</option>
+                                            <option value="">14:00</option>
+                                            <option value="">15:00</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group flex align-items-center">
+                                        <span class="form-label">Время заезда</span>
+                                        <select class="select sm">
+                                            <option value="">12:00</option>
+                                            <option value="">13:00</option>
+                                            <option value="">14:00</option>
+                                            <option value="">15:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> трансфер из/в аэропорт/жд вокзал
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> оплата картой
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> оплата наличными
+                                        <span></span>
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" value=""> возможен безналичный расчет
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="indent-20">
                             <textarea name="name" rows="5" class="form-control" placeholder="Описание"></textarea>
                         </div>
@@ -162,10 +547,17 @@
             var myDropzone = new Dropzone("#myAwesomeDropzone");
             myDropzone.on("addedfile", function (file) {
                 $('.upload-more').appendTo('.upload-preview').addClass('active');
+                $('.dz-preview').not('.close-has').append('<div class="close"></div>').addClass('close-has');
+                closeDzPreview();
             });
             $('.upload-more').on('click', function () {
                 $('.upload-main')[0].click();
             });
+            function closeDzPreview() {
+                $('.dz-preview .close').on('click', function () {
+                   $(this).closest('.dz-preview').remove();
+                });
+            }
 
             var flag = 0;
             $('[data-toggle="map"]').on('click', function (e) {
@@ -243,5 +635,44 @@
                 }
             }
 
+            function addBedroom(e, el) {
+                e.preventDefault();
+                $(el).closest('.special-content').find('.bedroom').append('<div class="indent-10 special-row"> <div class="row"> <div class="flex align-items-center"> <div class="col-md-3 col-xs-12">Кровать</div> <div class="col-md-3 col-xs-12"> <select class="select sm full" data-placeholder=" "> <option value=""></option> <option value="">-</option> <option value="">-</option> <option value="">-</option> <option value="">-</option> </select> </div> </div> </div> </div>');
+                $('.bedroom').find('.select').styler();
+            }
+            function addSofa(e, el) {
+                e.preventDefault();
+                $(el).closest('.special-content').find('.sofa').append('<div class="indent-10 special-row"> <div class="row"> <div class="flex align-items-center"> <div class="col-md-3 col-xs-12">Диван кровать</div> <div class="col-md-3 col-xs-12"> <select class="select sm full" data-placeholder=" "> <option value=""></option> <option value="">-</option> <option value="">-</option> <option value="">-</option> <option value="">-</option> </select> </div> </div> </div> </div>');
+                $('.sofa').find('.select').styler();
+            }
+            function addCouch(e, el) {
+                e.preventDefault();
+                $(el).closest('.special-content').find('.couch').append('<div class="indent-10 special-row"> <div class="row"> <div class="flex align-items-center"> <div class="col-md-3 col-xs-12">Кушетка</div> <div class="col-md-3 col-xs-12"> <select class="select sm full" data-placeholder=" "> <option value=""></option> <option value="">-</option> <option value="">-</option> <option value="">-</option> <option value="">-</option> </select> </div> </div> </div> </div>');
+                $('.couch').find('.select').styler();
+            }
+
+            var bedroom = 2,
+                maxBedroom = 4;
+            $('.add-bedroom-special').on('click', function (e) {
+                e.preventDefault();
+
+                if(bedroom != maxBedroom) {
+                    $(this).closest('.special-container').append('<div class="special-block"> <div class="request-info"> ' + bedroom + ' Спальня </div> <div class="special-content bg-gray"> <div class="indent-40"><div class="indent-10 special-row"> <div class="row"> <div class="flex flex-wrap align-items-center"> <div class="col-md-3 col-xs-12 indent-10-sm">Кровать</div> <div class="col-md-3 col-xs-12 indent-10-sm"> <select class="select sm full" data-placeholder=" "> <option value=""></option> <option value="">-</option> <option value="">-</option> <option value="">-</option> <option value="">-</option> </select> </div> <div class="col-md-4 col-xs-12"> <a href="#" class="add-link add-bedroom"  onclick="addBedroom(event, this);">Добавить кровать</a> </div> </div> </div> </div> <div class="bedroom"></div> <div class="indent-10 special-row"> <div class="row"> <div class="flex flex-wrap align-items-center"> <div class="col-md-3 col-xs-12 indent-10-sm">Диван кровать</div> <div class="col-md-3 col-xs-12 indent-10-sm"> <select class="select sm full" data-placeholder=" "> <option value=""></option> <option value="">-</option> <option value="">-</option> <option value="">-</option> <option value="">-</option> </select> </div> <div class="col-md-4 col-xs-12"> <a href="#" class="add-link add-sofa"  onclick="addSofa(event, this);">Добавить диван кровать</a> </div> </div> </div> </div> <div class="sofa"></div> <div class="indent-10 special-row"> <div class="row"> <div class="flex flex-wrap align-items-center"> <div class="col-md-3 col-xs-12 indent-10-sm">Кушетка</div> <div class="col-md-3 col-xs-12 indent-10-sm"> <select class="select sm full" data-placeholder=" "> <option value=""></option> <option value="">-</option> <option value="">-</option> <option value="">-</option> <option value="">-</option> </select> </div> <div class="col-md-4 col-xs-12"> <a href="#" class="add-link add-couch"  onclick="addCouch(event, this);">Добавить кушетку</a> </div> </div> </div> </div> <div class="couch"></div> </div> <div class="row"> <div class="col-sm-4 col-xs-6"> <label class="checkbox"> <input type="checkbox" value="" checked> Интернет Wi-Fi <span></span> </label> <label class="checkbox"> <input type="checkbox" value=""> Кондиционер <span></span> </label> <label class="checkbox"> <input type="checkbox" value=""> Балкон/терраса <span></span> </label> </div> <div class="col-sm-4 col-xs-6"> <label class="checkbox"> <input type="checkbox" value=""> Парковка <span></span> </label> <label class="checkbox"> <input type="checkbox" value=""> Бойлер <span></span> </label> <label class="checkbox"> <input type="checkbox" value="" checked> Отопление <span></span> </label> </div> </div> </div> </div>');
+                    $('.select').styler();
+                    bedroom++;
+                }
+            });
+
+            var guest = 2,
+                maxGuest= 4;
+            $('.add-guest-special').on('click', function (e) {
+                e.preventDefault();
+
+                if(guest != maxGuest) {
+                    $(this).closest('.special-container').append('<div class="special-block"> <div class="request-info"> ' + guest + ' Гостинная </div> <div class="special-content bg-gray"> <div class="indent-40"> <div class="indent-10 special-row"> <div class="row"> <div class="flex flex-wrap align-items-center"> <div class="col-md-3 col-xs-12 indent-10-sm">Количество диванов</div> <div class="col-md-3 col-xs-12 indent-10-sm"> <input type="text" class="form-control sm w-125"> </div> </div> </div> </div> <div class="indent-10 special-row"> <div class="row"> <div class="flex flex-wrap align-items-center"> <div class="col-md-3 col-xs-12 indent-10-sm">Диван кровать</div> <div class="col-md-3 col-xs-12 indent-10-sm"> <select class="select sm full" data-placeholder=" "> <option value=""></option> <option value="">-</option> <option value="">-</option> <option value="">-</option> <option value="">-</option> </select> </div> <div class="col-md-4 col-xs-12"> <a href="#" class="add-link add-sofa" onclick="addSofa(event, this);">Добавить диван кровать</a> </div> </div> </div> </div> <div class="sofa"></div> </div> <div class="row"> <div class="col-sm-4 col-xs-6"> <label class="checkbox"> <input type="checkbox" value="" checked> TV <span></span> </label> <label class="checkbox"> <input type="checkbox" value=""> Кондиционер <span></span> </label> </div> <div class="col-sm-4 col-xs-6"> <label class="checkbox"> <input type="checkbox" value=""> Парковка <span></span> </label> <label class="checkbox"> <input type="checkbox" value=""> Бойлер <span></span> </label> </div> <div class="col-sm-4 col-xs-6"> <label class="checkbox"> <input type="checkbox" value=""> Балкон/терраса <span></span> </label> </div> </div> </div> </div>');
+                    $('.select').styler();
+                    guest++;
+                }
+            });
         </script>
 @@include('templates/_end.html')

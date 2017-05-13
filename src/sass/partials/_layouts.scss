@@ -732,3 +732,39 @@
     }
   }
 }
+.add-link {
+  padding-left: 30px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    background: url('../img/add-link.png') no-repeat;
+    background-size: cover;
+  }
+}
+.special {
+  &-container {
+    .add-special {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  }
+  &-block {
+    margin-bottom: 30px;
+
+    .request-info {
+      margin-bottom: 8px;
+    }
+  }
+  &-content {
+    padding: 20px 15px;
+  }
+}
+.select.full {
+  width: 100%;
+}

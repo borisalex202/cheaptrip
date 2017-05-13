@@ -31,6 +31,9 @@ a {
   &-white {
     background: #fff;
   }
+  &-gray {
+    background: #F4F4F4;
+  }
 }
 .col{
   &-md {
@@ -371,12 +374,12 @@ a {
   position: relative;
   font-weight: 500;
   padding-left: 50px;
-  padding-top: 5px;
   cursor: pointer;
   margin: 0 15px 10px 0;
   line-height: 17px;
   padding-top: 10px;
   padding-bottom: 10px;
+  min-height: 20px;
 
   &-b1 {
     .checkbox {
