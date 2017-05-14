@@ -363,6 +363,10 @@ textarea {
     .form {
       &-control {
         border-color: #FC252D;
+        color: #FC252D;
+        @include placeholder{
+          color: #FC252D;
+        }
       }
     }
     .error-icon {
