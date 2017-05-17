@@ -20,6 +20,7 @@
     "jquery-form-styler": "1.7.6",
     "air-datepicker": "^2.2.3",
     "slick-carousel": "^1.6.0",
-    "dropzone": "^4.3.0"
+    "dropzone": "^4.3.0",
+    "toastr": "^2.1.3"
   }
 }

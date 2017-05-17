@@ -71,14 +71,13 @@
                                             <span></span>
                                         </label>
                                     </div>
-                                    <div class="form-group flex align-items-center sm form-error">
+                                    <div class="form-group flex align-items-center sm">
                                         <span class="form-label">Площадь квартиры</span>
-                                        <input type="text" class="form-control sm w-125" placeholder="Заполните">
-                                        <span class="error-icon"></span>
+                                        <input type="text" class="form-control sm w-125">
                                     </div>
                                     <div class="form-group flex align-items-center sm">
                                         <span class="form-label">Количество ванных комнат</span>
-                                        <input type="text" class="form-control sm w-125">
+                                        <input type="text" class="form-control sm w-125 toastr-test">
                                     </div>
                                     <div class="form-group flex align-items-center sm">
                                         <span class="form-label">Количество комнат</span>
@@ -672,6 +671,12 @@
                     $(this).closest('.special-container').append('<div class="special-block"> <div class="request-info"> ' + guest + ' Гостинная </div> <div class="special-content bg-gray"> <div class="indent-40"> <div class="indent-10 special-row"> <div class="row"> <div class="flex flex-wrap align-items-center"> <div class="col-md-3 col-xs-12 indent-10-sm">Количество диванов</div> <div class="col-md-3 col-xs-12 indent-10-sm"> <input type="text" class="form-control sm w-125"> </div> </div> </div> </div> <div class="indent-10 special-row"> <div class="row"> <div class="flex flex-wrap align-items-center"> <div class="col-md-3 col-xs-12 indent-10-sm">Диван кровать</div> <div class="col-md-3 col-xs-12 indent-10-sm"> <select class="select sm full" data-placeholder=" "> <option value=""></option> <option value="">-</option> <option value="">-</option> <option value="">-</option> <option value="">-</option> </select> </div> <div class="col-md-4 col-xs-12"> <a href="#" class="add-link add-sofa" onclick="addSofa(event, this);">Добавить диван кровать</a> </div> </div> </div> </div> <div class="sofa"></div> </div> <div class="row"> <div class="col-sm-4 col-xs-6"> <label class="checkbox"> <input type="checkbox" value="" checked> TV <span></span> </label> <label class="checkbox"> <input type="checkbox" value=""> Кондиционер <span></span> </label> </div> <div class="col-sm-4 col-xs-6"> <label class="checkbox"> <input type="checkbox" value=""> Парковка <span></span> </label> <label class="checkbox"> <input type="checkbox" value=""> Бойлер <span></span> </label> </div> <div class="col-sm-4 col-xs-6"> <label class="checkbox"> <input type="checkbox" value=""> Балкон/терраса <span></span> </label> </div> </div> </div> </div>');
                     $('.select').styler();
                     guest++;
+                }
+            });
+
+            $('.toastr-test').keyup(function () {
+                if(parseInt($(this).val()) > 5) {
+                    toastr.error('Количество ванных комнат не может превышать 5', 'Ошибка!');
                 }
             });
         </script>
