@@ -10,7 +10,7 @@
 			margin-bottom: 0;
 		}
 		.category {
-			font-size: 20px;
+			font-size: 25px;
 		}
 		.btn {
 			font-size: 12px;
@@ -99,10 +99,10 @@
 			}
 			&-slide {
 				cursor: pointer;
-				border: 1px solid transparent;
+				border: 2px solid transparent;
 			}
 			&-current {
-				border: 1px solid $black;
+				border: 2px solid $black;
 			}
 			@media (max-width: $screen-sm-max) {
 				&-list {

@@ -257,6 +257,8 @@
 			font-weight: 300;
 			margin: 0;
 			line-height: 20px;
+			max-height: 85px;
+			overflow: hidden;
 
 			&.title {
 				font-weight: 500;
@@ -364,8 +366,8 @@
 	}
 	.icon-cross {
 		position: absolute;
-		top: 15px;
-		right: 15px;
+		top: -5px;
+		right: 0;
 		max-width: 25px;
 		max-height: 25px;
 		cursor: pointer;

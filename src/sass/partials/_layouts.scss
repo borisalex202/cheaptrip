@@ -257,10 +257,10 @@
     }
     .life-item {
       border: 2px solid $black;
-      padding: 4px 0px 5px;
+      padding: 4px 8px 5px;
       text-align: center;
       margin-left: 5px;
-      width: 44px;
+      //width: 44px;
       height: 44px;
 
       .number {
@@ -767,4 +767,20 @@
 }
 .select.full {
   width: 100%;
+}
+.align-start {
+  @include align-items(flex-start);
+}
+.text-center-sm {
+  @media (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+}
+.send-all {
+  position: relative;
+  top: -15px;
+
+  @media (max-width: $screen-xs-max) {
+    top: -3px;
+  }
 }
