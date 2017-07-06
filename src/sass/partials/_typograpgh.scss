@@ -360,6 +360,13 @@ textarea {
     padding-right: 20px;
   }
   &-error {
+    &-message {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      right: 0;
+      color: #FC252D;
+    }
     .form {
       &-control {
         border-color: #FC252D;
